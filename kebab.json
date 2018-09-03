@@ -1,0 +1,139 @@
+{
+	"type": "FeatureCollection",
+	"features": [{
+			"type": "Feature",
+			"properties": {
+				"name": "Akdeniz",
+				"adres": "Sienkiewicza 26",
+				"telefon": "25 785 00 65 "
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					22.278825044631954,
+					52.165512252111604
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "Iskele",
+				"adres": "10 lutego 20",
+				"telefon": "725 720 725"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					22.265709042549133,
+					52.170510150447456
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "Mirakoli",
+				"adres": "Brzeska 134",
+				"telefon": "508 385 229"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					22.301892042160034,
+					52.15133148529411
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "Al Amir",
+				"adres": "Piłsudskiego 74 ",
+				"telefon": "25 632 34 43"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					22.269952297210693,
+					52.16848342063494
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "Neva",
+				"adres": "Pułaskiego 47",
+				"telefon": "511 332 563"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					22.276483476161957,
+					52.167109732272216
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "Kebab King",
+				"adres": "Piłsudskiego 72",
+				"telefon": "22 316 37 37"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					22.26993352174759,
+					52.16792572472485
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "Restora",
+				"adres": "Sienkiewicza 67",
+				"telefon": "513 407 761"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					22.26891969999997,
+					52.16508089999999
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "Max Kebab",
+				"adres": "Świrskiego 52",
+				"telefon": "570 108 299"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					22.275694799999997,
+					52.169783
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"name": "Station",
+				"adres": "Plac St. Zdanowskiego 1/130",
+				"telefon": "517 517 177"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					22.271674275398254,
+					52.162447101276186
+				]
+			}
+		}
+	]
+}

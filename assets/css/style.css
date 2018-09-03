@@ -1,0 +1,13 @@
+.map-wrapper {
+    display: flex;
+}
+
+.mymap {
+    position: relative;
+    height: 90vh;
+    width: 100%;
+    outline: none;
+    touch-action: none;
+    background-color: #445a71;
+    position: relative;
+}
