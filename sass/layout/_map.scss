@@ -8,6 +8,22 @@
     position: relative;
 }
 
+#current_center {
+    position: absolute;
+    margin-top: 700px;
+    z-index: 1000;
+    background: rgba(255, 255, 255,0.7);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px grey;
+    min-height: 25px;
+    min-width: 20px;
+}
+
+.display {
+    display: none;
+}
+
 
 
 

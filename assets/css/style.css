@@ -1,13 +1,102 @@
-.map-wrapper {
-    display: flex;
-}
+html {
+  font-size: 10px;
+  height: 100%; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #e6e6e6;
+  height: 100%; }
+
+main {
+  min-height: 1500px; }
+
+.navbar {
+  display: flex;
+  padding: 0;
+  height: 7vh; }
+  .navbar__menu {
+    display: block;
+    list-style-type: none;
+    padding-right: 150px; }
+  .navbar__logo {
+    position: relative;
+    top: 10px;
+    flex: 1;
+    list-style-type: none;
+    padding-left: 150px; }
+  .navbar__menu ul {
+    display: inline-block;
+    list-style-type: none; }
+  .navbar__menu ul li {
+    display: inline-block;
+    list-style-type: none; }
+  .navbar__item, .navbar__item--active {
+    width: 50px;
+    margin-left: 30px;
+    text-decoration: none;
+    font-size: 14px;
+    color: #777777;
+    text-transform: uppercase;
+    position: relative;
+    top: 10px; }
+  .navbar__logo-img {
+    height: 35px;
+    width: 35px; }
+  .navbar__item:hover {
+    color: #7cc576; }
+  .navbar__item--active {
+    color: #7cc576; }
+
+.fixed-nav {
+  z-index: 2;
+  width: 100%;
+  background-color: white;
+  padding: 0;
+  position: fixed; }
+
+.hamburger {
+  width: 100%;
+  cursor: pointer;
+  display: none; }
+  .hamburger__icon {
+    height: 70px;
+    width: 70px;
+    margin: 0; }
 
 .mymap {
-    position: relative;
-    height: 90vh;
-    width: 100%;
-    outline: none;
-    touch-action: none;
-    background-color: #445a71;
-    position: relative;
-}
+  height: 90vh;
+  width: 100%;
+  outline: none;
+  touch-action: none;
+  background-color: #445a71;
+  position: relative; }
+
+#current_center {
+  position: absolute;
+  margin-top: 700px;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px grey;
+  min-height: 25px;
+  min-width: 20px; }
+
+.display {
+  display: none; }
+
+.overlay {
+  position: absolute;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 10px;
+  right: 0;
+  margin: 15px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px grey;
+  min-height: 200px; }
