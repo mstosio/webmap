@@ -1,4 +1,6 @@
 .overlay {
+    display: flex;
+    flex-direction: column;
     position: absolute;
     z-index: 1000;
     background: rgba(255, 255, 255,0.7);
@@ -8,4 +10,8 @@
     border-radius: 10px;
     box-shadow: 1px 1px 1px grey;
     min-height: 200px;
+}
+
+.leaflet-popup-content-wrapper {
+    display: flex;
 }

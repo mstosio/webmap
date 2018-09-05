@@ -1,3 +1,17 @@
+//Funkcja, sprawia, że wszystkie checkboxy są zaznaczone podczas załadowania strony
+
+window.onload = onPageLoad();
+
+function onPageLoad() {
+  const kebs = document.getElementsByClassName("marker-checkbox");
+  const checkboxes = document.querySelectorAll("checkbox");
+  for(var i = 0; i < kebs.length; i++){
+	  kebs[i].checked = true;
+  }
+}
+
+// MAP INTERACTIVITY
+
 
 const mymap = L.map('mymap').setView([52.167930660117555, 22.271411418914795], 15);
 
@@ -14,7 +28,7 @@ const mymap = L.map('mymap').setView([52.167930660117555, 22.271411418914795], 1
 	// importowanie geoJSON przez AJAX call
 
 	var kebabGeoJSON = false;
-	fetch('/kebab.json',{
+	fetch('/restaurants.json',{
 		method: 'GET'
 	})
 	.then(response => response.json())
@@ -28,6 +42,8 @@ const mymap = L.map('mymap').setView([52.167930660117555, 22.271411418914795], 1
 				}
 			},
 			pointToLayer: function(geoJsonPoint, latlng){
+
+				//Funckja, która nadaje odpowiednie ikony 
 				if(geoJsonPoint.properties.restaurant === 'kebab'){
 					return  L.marker(latlng, {
 						icon: kebabIcon
@@ -40,31 +56,93 @@ const mymap = L.map('mymap').setView([52.167930660117555, 22.271411418914795], 1
 					return  L.marker(latlng, {
 						icon: sushiIcon
 					});
-				} 						
+				} else if (geoJsonPoint.properties.restaurant === 'bar') {
+					return  L.marker(latlng, {
+						icon: barIcon
+					});
+				} else if (geoJsonPoint.properties.restaurant === 'restauracja') {
+					return  L.marker(latlng, {
+						icon: restaurantIcon
+					});	
+				}							
 			},
 			onEachFeature: function(feature, layer){
+				
+				const checkboxKebab = document.getElementById("kebabcheckbox");
+				const checkboxPizza = document.getElementById("pizzacheckbox");
+				const checkboxSushi = document.getElementById("sushicheckbox");
+				const checkboxBar = document.getElementById("barscheckbox");
+				const checkboxRestaurant = document.getElementById("restaurantcheckbox");
+
+				checkboxKebab.addEventListener("click", toggleKebab);
+				checkboxPizza.addEventListener("click", togglePizza);
+				checkboxSushi.addEventListener("click", toggleSushi);
+				checkboxBar.addEventListener("click", toggleBar);
+				checkboxRestaurant.addEventListener("click", toggleRestaurant);
+
+				//Popup
 				if(feature.geometry.type === 'Point'){
+					console.log("sex");
 					layer.bindPopup(
-						feature.geometry.coordinates.join(',') +
-						feature.properties.telefon +
+						feature.properties.name + "<br>" +
+						feature.properties.telefon + "<br>" +
 						feature.properties.adres
 					  );
+				} else {
+					console.log("sex");
 				}
-			},
-			onEachFeature: function(feature, layer){
-				const toggle = document.getElementById("togglelayer");
-				toggle.addEventListener("click", function(){
-					const kebab = feature.properties.restaurant === 'kebab';
-					const kebabImg = document.querySelectorAll('img[src="assets/mapicons/kebab.png"]');
-					if(kebab){
-						console.log(kebabImg);
-						kebabImg.forEach(function(keba){
-							keba.style.display = "none";
-						})	
-					} else {
-						console.log("retard");
-					}
-				});
+
+				//Poszczegolne funkcje, które pozwalają na włączanie oraz wyłączanie widoku markerów
+				
+				function toggleKebab(){		
+						const kebab = feature.properties.restaurant === 'kebab';	
+						const kebabImg = document.querySelectorAll('img[src="assets/mapicons/kebab.png"]');					
+						if(kebab){
+							kebabImg.forEach(function(keba){
+								keba.classList.toggle("display");
+							}) 	
+						} 
+				};
+
+				function togglePizza(){
+						const pizza = feature.properties.restaurant === 'pizza';
+						const pizzaImg = document.querySelectorAll('img[src="assets/mapicons/pizza.png"]');
+						if(pizza){
+							pizzaImg.forEach(function(pizzeria){
+								pizzeria.classList.toggle("display");
+							}) 	
+						} 
+				};
+
+				function toggleSushi(){
+					const sushi = feature.properties.restaurant === 'sushi';
+					const sushiImg = document.querySelectorAll('img[src="assets/mapicons/sushi.png"]');
+					if(sushi){
+						sushiImg.forEach(function(sushipart){
+							sushipart.classList.toggle("display");
+						}) 	
+					} 
+				};
+
+				function toggleBar(){
+					const bar = feature.properties.restaurant === 'bar';
+					const barImg = document.querySelectorAll('img[src="assets/mapicons/bar.png"]');
+					if(bar){
+						barImg.forEach(function(bary){
+							bary.classList.toggle("display");
+						}) 	
+					} 
+				};
+
+				function toggleRestaurant(){
+					const restaurant = feature.properties.restaurant === 'restauracja';
+					const restaurantImg = document.querySelectorAll('img[src="assets/mapicons/bar.png"]');
+					if(restaurant){
+						restaurantImg.forEach(function(rest){
+							rest.classList.toggle("display");
+						}) 	
+					} 
+				};
 			
 			},
 
@@ -73,10 +151,10 @@ const mymap = L.map('mymap').setView([52.167930660117555, 22.271411418914795], 1
 	.catch(error => console.log(error.message));
 
 
-
+	//Klasa ikony
 	  const gooportalIcon = L.Icon.extend({
 		options: {
-			iconSize:     [50, 64],
+			iconSize:     [40, 51],
 			shadowSize:   [90, 64],
 			iconAnchor:   [15, 50],
 			shadowAnchor: [4, 62],
@@ -84,9 +162,12 @@ const mymap = L.map('mymap').setView([52.167930660117555, 22.271411418914795], 1
 		}
 	});
 
+	// poszczegolny ikony
 	const kebabIcon = new gooportalIcon({iconUrl: 'assets/mapicons/kebab.png'});
 	const pizzaIcon = new gooportalIcon({iconUrl: 'assets/mapicons/pizza.png'});
 	const sushiIcon = new gooportalIcon({iconUrl: 'assets/mapicons/sushi.png'});
+	const barIcon = new gooportalIcon({iconUrl: 'assets/mapicons/bar.png'});
+	const restaurantIcon = new gooportalIcon({iconUrl: 'assets/mapicons/restaurant.png'});
 
 	
 

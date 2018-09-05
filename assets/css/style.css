@@ -88,7 +88,7 @@ main {
   min-width: 20px; }
 
 .display {
-  display: none; }
+  display: none !important; }
 
 .overlay {
   position: absolute;
