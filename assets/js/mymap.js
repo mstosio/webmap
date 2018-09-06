@@ -28,7 +28,7 @@ const mymap = L.map('mymap').setView([52.167930660117555, 22.271411418914795], 1
 	// importowanie geoJSON przez AJAX call
 
 	var kebabGeoJSON = false;
-	fetch('/restaurants.json',{
+	fetch('/kebabs.json',{
 		method: 'GET'
 	})
 	.then(response => response.json())
@@ -82,15 +82,13 @@ const mymap = L.map('mymap').setView([52.167930660117555, 22.271411418914795], 1
 
 				//Popup
 				if(feature.geometry.type === 'Point'){
-					console.log("sex");
+					
 					layer.bindPopup(
 						feature.properties.name + "<br>" +
 						feature.properties.telefon + "<br>" +
 						feature.properties.adres
 					  );
-				} else {
-					console.log("sex");
-				}
+				};
 
 				//Poszczegolne funkcje, które pozwalają na włączanie oraz wyłączanie widoku markerów
 				
@@ -128,15 +126,15 @@ const mymap = L.map('mymap').setView([52.167930660117555, 22.271411418914795], 1
 					const bar = feature.properties.restaurant === 'bar';
 					const barImg = document.querySelectorAll('img[src="assets/mapicons/bar.png"]');
 					if(bar){
-						barImg.forEach(function(bary){
-							bary.classList.toggle("display");
+						barImg.forEach(function(ba){
+							ba.classList.toggle("display");
 						}) 	
 					} 
 				};
 
 				function toggleRestaurant(){
 					const restaurant = feature.properties.restaurant === 'restauracja';
-					const restaurantImg = document.querySelectorAll('img[src="assets/mapicons/bar.png"]');
+					const restaurantImg = document.querySelectorAll('img[src="assets/mapicons/restaurant.png"]');
 					if(restaurant){
 						restaurantImg.forEach(function(rest){
 							rest.classList.toggle("display");

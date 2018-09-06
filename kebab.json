@@ -1,372 +1,248 @@
-{
-	"type": "FeatureCollection",
-	"features": [{
+,
+		{
 			"type": "Feature",
 			"properties": {
-				"restaurant": "kebab",
-				"name": "Akdeniz",
-				"adres": "Sienkiewicza 26",
-				"telefon": "25 785 00 65 "
+				"restaurant": "bar",
+				"name": "Pepe Verde",
+				"adres": "Wojskowa 3",
+				"telefon": "25 633 07 00"
 			},
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					22.278825044631954,
-					52.165512252111604
+					22.27124170000002,
+					52.1694624
 				]
 			}
 		},
 		{
 			"type": "Feature",
 			"properties": {
-				"restaurant": "kebab",
-				"name": "Iskele",
-				"adres": "10 lutego 20",
-				"telefon": "725 720 725"
+				"restaurant": "bar",
+				"name": "Piec Sztuk",
+				"adres": "11 Listopada 23",
+				"telefon": "791 891 603"
 			},
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					22.265709042549133,
-					52.170510150447456
+					22.274362099999962,
+					52.172036
 				]
 			}
 		},
 		{
 			"type": "Feature",
 			"properties": {
-				"restaurant": "kebab",
-				"name": "Mirakoli",
-				"adres": "Brzeska 134",
-				"telefon": "508 385 229"
+				"restaurant": "bar",
+				"name": "Piwiarnia Miejska Siedlce",
+				"adres": "Wojskowa 1",
+				"telefon": "666 660 088"
 			},
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					22.301892042160034,
-					52.15133148529411
+					22.271366599999965,
+					52.1685326
+				]
+			}
+        },
+        ,
+		{
+			"type": "Feature",
+			"properties": {
+				"restaurant": "bar",
+				"name": "Pub Pracownia Rannych Pantofli",
+				"adres": "3 Maja 38",
+				"telefon": "502 799 294"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					22.27763099999993,
+					52.1641427
+				]
+			}
+        }
+        
+
+
+        ////////////////////
+
+
+        {
+			"type": "Feature",
+			"properties": {
+				"restaurant": "restauracja",
+				"name": "Wolczykij",
+				"adres": "Biskupa Świrskiego 43B",
+				"telefon": "792 596 254"
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					22.276779499999975,
+					52.16919859999999
 				]
 			}
 		},
 		{
 			"type": "Feature",
 			"properties": {
-				"restaurant": "kebab",
-				"name": "Al Amir",
-				"adres": "Piłsudskiego 74 ",
-				"telefon": "25 632 34 43"
+				"restaurant": "restauracja",
+				"name": "Brofaktura",
+				"adres": "Armii Krajowej 5",
+				"telefon": "25 633 63 33"
 			},
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					22.269952297210693,
-					52.16848342063494
+					22.27172900000005,
+					52.1667772
 				]
 			}
 		},
 		{
 			"type": "Feature",
 			"properties": {
-				"restaurant": "kebab",
-				"name": "Neva",
-				"adres": "Pułaskiego 47",
-				"telefon": "511 332 563"
+				"restaurant": "restauracja",
+				"name": "Meat and Fit",
+				"adres": "Piłsudskiego 11",
+				"telefon": "517 212 288,"
 			},
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					22.276483476161957,
-					52.167109732272216
+					22.278839699999935,
+					52.1680883
 				]
 			}
 		},
 		{
 			"type": "Feature",
 			"properties": {
-				"restaurant": "kebab",
-				"name": "Kebab King",
-				"adres": "Piłsudskiego 72",
-				"telefon": "22 316 37 37"
+				"restaurant": "restauracja",
+				"name": "Kochanówka",
+				"adres": "Kochanowskiego 9",
+				"telefon": "505 172 964,"
 			},
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					22.26993352174759,
-					52.16792572472485
+					22.275202499999978,
+					52.1686093
 				]
 			}
 		},
 		{
 			"type": "Feature",
 			"properties": {
-				"restaurant": "kebab",
-				"name": "Restora",
-				"adres": "Sienkiewicza 67",
-				"telefon": "513 407 761"
+				"restaurant": "restauracja",
+				"name": "Zaścianek Polski",
+				"adres": "Asłanowicza 17",
+				"telefon": "25 631-02-29,"
 			},
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					22.26891969999997,
-					52.16508089999999
+					22.277788200000032,
+					52.1707291
 				]
 			}
 		},
 		{
 			"type": "Feature",
 			"properties": {
-				"restaurant": "kebab",
-				"name": "Max Kebab",
-				"adres": "Świrskiego 52",
-				"telefon": "570 108 299"
+				"restaurant": "restauracja",
+				"name": "Bollywood Hollywood",
+				"adres": "Wiszniewskiego 4",
+				"telefon": "25 6 332 332,"
 			},
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					22.275694799999997,
-					52.169783
+					22.288443400000006,
+					52.1688415
 				]
 			}
 		},
 		{
 			"type": "Feature",
 			"properties": {
-				"restaurant": "kebab",
-				"name": "Station",
-				"adres": "Plac St. Zdanowskiego 1/130",
-				"telefon": "517 517 177"
+				"restaurant": "restauracja",
+				"name": "Omega",
+				"adres": "Starowiejska 24",
+				"telefon": "533 016 016,"
 			},
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					22.271674275398254,
-					52.162447101276186
+					22.28715539999996,
+					52.1679476
 				]
 			}
 		},
 		{
 			"type": "Feature",
 			"properties": {
-				"restaurant": "pizza",
-				"name": "Factory",
-				"adres": "Sokołowska 157",
-				"telefon": "735 922 922"
+				"restaurant": "restauracja",
+				"name": "Bufet Gastronomiczny PKP",
+				"adres": "pl. Zdanowskiego 1",
+				"telefon": "25 632 66 42,"
 			},
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					22.265981900000043,
-					52.189758
+					22.272387600000002,
+					52.1620627
 				]
 			}
 		},
 		{
 			"type": "Feature",
 			"properties": {
-				"restaurant": "pizza",
-				"name": "Telepizza",
-				"adres": "Rynkowa 22",
-				"telefon": "25 644 00 00"
+				"restaurant": "restauracja",
+				"name": "Patio",
+				"adres": "Plac Tysiąlecia 21",
+				"telefon": "728 949 649,"
 			},
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					22.27310490000002,
-					52.175415
+					22.275838399999998,
+					52.165542
 				]
 			}
 		},
 		{
 			"type": "Feature",
 			"properties": {
-				"restaurant": "pizza",
-				"name": "Mario",
-				"adres": "Norwida 2A",
-				"telefon": "25 633 21 53"
+				"restaurant": "restauracja",
+				"name": "Kamienica",
+				"adres": "Wojska Polskiego 60",
+				"telefon": "666 455 688,"
 			},
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					22.25347290000002,
-					52.1640007
+					22.26765720000003,
+					52.1660692
 				]
 			}
 		},
 		{
 			"type": "Feature",
 			"properties": {
-				"restaurant": "pizza",
-				"name": "Plejada",
-				"adres": "Starzyńskiego 11",
-				"telefon": "25 632 69 59"
+				"restaurant": "bar",
+				"name": "Pub Pracownia Rannych Pantofli",
+				"adres": "3 Maja 38",
+				"telefon": "502 799 294"
 			},
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					22.300931300000002,
-					52.15671020000001
-				]
-			}
-		},
-		{
-			"type": "Feature",
-			"properties": {
-				"restaurant": "pizza",
-				"name": "Verona",
-				"adres": "Sokołowska 37",
-				"telefon": "25 633 35 33"
-			},
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					22.27169200000003,
-					52.1733188
-				]
-			}
-		},
-		{
-			"type": "Feature",
-			"properties": {
-				"restaurant": "pizza",
-				"name": "Italia",
-				"adres": "Browarna 1",
-				"telefon": "25 633 32 13"
-			},
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					22.2770845,
-					52.1702525
-				]
-			}
-		},
-		{
-			"type": "Feature",
-			"properties": {
-				"restaurant": "pizza",
-				"name": "Da Grasso",
-				"adres": "Sienkiewicza 12",
-				"telefon": "25 633 98 98"
-			},
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					22.281301600000006,
-					52.1656212
-				]
-			}
-		},
-		{
-			"type": "Feature",
-			"properties": {
-				"restaurant": "pizza",
-				"name": "Presto",
-				"adres": "Piłsudskiego 74",
-				"telefon": "531 551 951"
-			},
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					22.269889007634788,
-					52.168390871525574
-				]
-			}
-		},
-		{
-			"type": "Feature",
-			"properties": {
-				"restaurant": "pizza",
-				"name": "Fabryka Smakow",
-				"adres": "Partyzantów 17",
-				"telefon": "25 632 00 00"
-			},
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					22.263515600000005,
-					52.1613312
-				]
-			}
-		},
-		{
-			"type": "Feature",
-			"properties": {
-				"restaurant": "pizza",
-				"name": "Kampa",
-				"adres": "Starowiejska 174",
-				"telefon": "25 633 70 80"
-			},
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					22.304992699999957,
-					52.16363339999999
-				]
-			}
-		},
-		{
-			"type": "Feature",
-			"properties": {
-				"restaurant": "pizza",
-				"name": "Piwnica za Rogiem",
-				"adres": "Sokołowska 23",
-				"telefon": "889 010 020"
-			},
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					22.272330099999976,
-					52.1728342
-				]
-			}
-		},
-		{
-			"type": "Feature",
-			"properties": {
-				"restaurant": "sushi",
-				"name": "Made in Japan",
-				"adres": "Czerwonego Krzyża 36",
-				"telefon": "609 990 999"
-			},
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					22.27834610000002,
-					52.1728265
-				]
-			}
-		},
-		{
-			"type": "Feature",
-			"properties": {
-				"restaurant": "sushi",
-				"name": "Nanatsu",
-				"adres": "Piłsudskiego 74",
-				"telefon": "257410677"
-			},
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					22.270522,
-					52.168808
-				]
-			}
-		},
-		{
-			"type": "Feature",
-			"properties": {
-				"restaurant": "sushi",
-				"name": "Nanatsu",
-				"adres": "Formińskiego 1",
-				"telefon": "25 75 15 223"
-			},
-			"geometry": {
-				"type": "Point",
-				"coordinates": [
-					22.277786900000024,
-					52.1632919
+					22.27763099999993,
+					52.1641427
 				]
 			}
 		}
-	]
-}

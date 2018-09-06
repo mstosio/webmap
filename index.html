@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Geoportal Siedlce</title>
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
-   integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
-   crossorigin=""/>
-   <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"
-   integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
-   crossorigin=""></script>
-	
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-	<meta name="viewport" content="width=device-width">
+    <title>Geoportal Siedlce</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
+    integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+    crossorigin=""/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.0/dist/MarkerCluster.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.0/dist/MarkerCluster.Default.css">
+    <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"
+    integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
+    crossorigin=""></script>
+
+
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+        
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <meta name="viewport" content="width=device-width">
 	
 </head>
 <body>
@@ -24,12 +29,12 @@
         
                 <nav class="navbar" id="navbar">
                     
-                        <div class="navbar__logo">
-                            <li class="navbar__logo__li">
-                            <a class="navbar__a" href="#">
-                                <a href="index.html"><img class="navbar__logo-img" src="assets/img/earth.png" alt="logo"></a>
-                            </a>
-                            </li>
+                        <div class="navbar__logo">                    
+                            <img class="navbar__logo-img" src="assets/mapicons/main-logo.svg" alt="logo">
+                            <div class="navbar__logo-box">
+                                <div class="navbar__logo-name">SIEDLCE</div>   
+                                <div class="navbar__logo-tagline">Geoportal</div>
+                            </div>                      
                         </div>
                                     
                         <div class="navbar__menu">
@@ -50,8 +55,8 @@
             <div><label><input type="checkbox" id="kebabcheckbox" class="marker-checkbox">JEBANE KEBASY</label></div>
             <div><label><input type="checkbox" id="pizzacheckbox" class="marker-checkbox">JEBANA PIZZA</label></div>
             <div><label><input type="checkbox" id="sushicheckbox" class="marker-checkbox">JEBANE SUSHI</label></div>
-            <div><label><input type="checkbox" id="barscheckbox" class="marker-checkbox">JEBANE BARY</label></div>
-            <div><label><input type="checkbox" id="restaurantcheckbox" class="marker-checkbox">JEBANE BARY</label></div>
+            <div><label><input type="checkbox" id="barscheckbox" class="marker-checkbox">Bary</label></div>
+            <div><label><input type="checkbox" id="restaurantcheckbox" class="marker-checkbox">Restauracje</label></div>
         </div> 
 
         <div id="mymap" class="mymap"> 
@@ -61,6 +66,7 @@
 
 <!-- <script type="text/javascript" src="assets/js/script.js"></script> -->
 <script type="text/javascript" src="assets/js/mymap.js"></script>
+<script src="https://unpkg.com/leaflet.markercluster@1.4.0/dist/leaflet.markercluster.js"></script>
 
 </body>
 </html>
