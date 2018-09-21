@@ -15,6 +15,109 @@ body {
 main {
   min-height: 1500px; }
 
+.leaflet-popup {
+  margin-bottom: -20px !important; }
+
+.leaflet-popup-content-wrapper, .leaflet-popup-tip {
+  color: #333;
+  box-shadow: 0 3px 14px rgba(0, 0, 0, 0.4); }
+
+.leaflet-popup-content {
+  font-family: 'Lato', sans-serif;
+  font-size: 13px; }
+
+.slideshowContainer {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 500px;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black; }
+
+.imageSlides {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: -1; }
+
+.slider-header-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  color: white;
+  text-transform: uppercase;
+  margin: 0 auto;
+  z-index: 1;
+  max-width: 520px;
+  font-size: 45px;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-family: 'Montserrat', extra-bold; }
+
+.slider-header {
+  margin-top: 100px; }
+
+.slider-label {
+  font-size: 25px;
+  margin: 0 auto; }
+
+.slideshowContainer_overlay {
+  background-color: rgba(0, 0, 0, 0.3);
+  min-height: 100%;
+  width: 100%; }
+
+.visible-slider {
+  opacity: 1; }
+
+.slideshowArrow {
+  font-size: 7em;
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: opacity 0.2s ease-in-out; }
+
+.slideshowArrow:hover {
+  opacity: 0.75; }
+
+#leftArrow {
+  position: absolute;
+  left: 4%;
+  top: 50%;
+  transform: translate(-50%, -50%); }
+
+#rightArrow {
+  position: absolute;
+  right: 4%;
+  top: 50%;
+  transform: translate(50%, -50%); }
+
+.slideshowCircles {
+  position: absolute;
+  bottom: 2%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center; }
+
+.circle {
+  display: inline-block;
+  margin-left: 3px;
+  margin-right: 3px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: solid 2px rgba(255, 255, 255, 0.5);
+  transition: 1s ease-in-out; }
+
+.dot {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: solid 2px rgba(255, 255, 255, 0.5); }
+
 .navbar {
   display: flex;
   padding: 0;
@@ -83,6 +186,18 @@ main {
     width: 70px;
     margin: 0; }
 
+.geoportal-footer {
+  display: flex;
+  flex-direction: inherit;
+  justify-content: flex-end;
+  font-family: 'Lato', sans-serif;
+  font-size: 12px;
+  height: 3vh; }
+  .geoportal-footer p {
+    padding: 5px 25px 0 25px; }
+  .geoportal-footer--bluetag {
+    color: #0078A8; }
+
 .mymap {
   height: 90vh;
   width: 100%;
@@ -93,7 +208,8 @@ main {
 
 #current_center {
   position: absolute;
-  margin-top: 700px;
+  margin-top: 800px;
+  margin-left: 180vh;
   z-index: 1000;
   background: rgba(255, 255, 255, 0.7);
   padding: 10px;
@@ -109,14 +225,80 @@ main {
   display: flex;
   flex-direction: column;
   position: absolute;
+  width: 150px;
   z-index: 1000;
   background: rgba(255, 255, 255, 0.7);
   padding: 10px;
   right: 0;
-  margin: 15px;
+  margin: 130px 15px 0 15px;
   border-radius: 10px;
   box-shadow: 1px 1px 1px grey;
-  min-height: 200px; }
+  min-height: 150px; }
+  .overlay__header {
+    padding-bottom: 15px; }
+    .overlay__header--small {
+      margin: 5px 0 5px 0; }
+  .overlay__label {
+    font-size: 15px; }
+  .overlay__marker-checkbox {
+    margin-right: 10px; }
 
 .leaflet-popup-content-wrapper {
   display: flex; }
+
+.slide-in__slider {
+  position: absolute;
+  width: 250px;
+  height: 90vh;
+  z-index: 1000;
+  float: left;
+  background: rgba(255, 255, 255, 0.9);
+  border-top: solid black;
+  border-bottom: solid black;
+  margin-left: -250px;
+  transition: 0.5s; }
+
+.slide-in__toggle-button {
+  position: relative;
+  left: 250px;
+  top: 0px;
+  background: rgba(255, 255, 255, 0.9);
+  width: 30px;
+  height: 50px;
+  z-index: 1000;
+  font-size: 75px; }
+
+.slide-in__toggle--arrow {
+  position: absolute;
+  left: 6px;
+  top: 15px;
+  width: 22px; }
+
+.slide-in__header {
+  padding: 25px;
+  font-size: 25px; }
+
+.slide-in__search-input {
+  margin-top: 25px;
+  margin-left: 25px;
+  outline: none;
+  padding: 10px; }
+  .slide-in__search-input:focus {
+    outline: none; }
+  .slide-in__search-input::placeholder {
+    opacity: 0.5; }
+
+.slide-in__label {
+  font-size: 15px;
+  margin-left: 25px; }
+
+.slide-in__click-box {
+  padding: 25px;
+  font-size: 20px; }
+
+.slide-in__image-box img {
+  width: 100%;
+  height: 150px; }
+
+.visible {
+  margin-left: 0px; }

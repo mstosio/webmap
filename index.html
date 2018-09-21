@@ -1,72 +1,103 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Geoportal Siedlce</title>
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
-    integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
-    crossorigin=""/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+        crossorigin="" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.0/dist/MarkerCluster.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.0/dist/MarkerCluster.Default.css">
-    <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"
-    integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
-    crossorigin=""></script>
+    <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
+        crossorigin=""></script>
+        
 
 
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-        
+
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <meta name="viewport" content="width=device-width">
-	
+
 </head>
+
 <body>
 
-        <header id="header">
-		
-                <div class="hamburger">
-                    <img class="hamburger__icon" src="icons/menu_icon.png" alt="">
-                </div>
-        
-                <nav class="navbar" id="navbar">
-                    
-                        <div class="navbar__logo">                    
-                            <img class="navbar__logo-img" src="assets/mapicons/main-logo.svg" alt="logo">
-                            <div class="navbar__logo-box">
-                                <div class="navbar__logo-name">SIEDLCE</div>   
-                                <div class="navbar__logo-tagline">Geoportal</div>
-                            </div>                      
-                        </div>
-                                    
-                        <div class="navbar__menu">
-                                <ul>
-                                    <li><a class="navbar__item" href="index.html">Strona Główna</a></li>
-                                    <li><a class="navbar__item--active" href="index.html">Geoportal</a></li>
-                                    <li><a class="navbar__item" href="index.html">Info</a></li>
-                                </ul>								
-                        </div>			
-                    
-                </nav>
-            </header>
-            
-        <input type="text" id="current_center">   
-        
-        <div class="overlay" id="overlay">
-            <h2>Map Options</h2>
-            <div><label><input type="checkbox" id="kebabcheckbox" class="marker-checkbox">JEBANE KEBASY</label></div>
-            <div><label><input type="checkbox" id="pizzacheckbox" class="marker-checkbox">JEBANA PIZZA</label></div>
-            <div><label><input type="checkbox" id="sushicheckbox" class="marker-checkbox">JEBANE SUSHI</label></div>
-            <div><label><input type="checkbox" id="barscheckbox" class="marker-checkbox">Bary</label></div>
-            <div><label><input type="checkbox" id="restaurantcheckbox" class="marker-checkbox">Restauracje</label></div>
-        </div> 
+    <header id="header">
 
-        <div id="mymap" class="mymap"> 
-
+        <div class="hamburger">
+            <img class="hamburger__icon" src="icons/menu_icon.png" alt="">
         </div>
+
+        <nav class="navbar" id="navbar">
+            <div class="navbar__logo">
+                <img class="navbar__logo-img" src="assets/mapicons/main-logo.svg" alt="logo">
+
+                <div class="navbar__logo-box">
+                    <div class="navbar__logo-name">SIEDLCE</div>
+                    <div class="navbar__logo-tagline">Geoportal</div>
+                </div>
+            </div>
+            <div class="navbar__menu">
+                <ul>
+                    <li><a class="navbar__item" href="stronaglowna.html">Strona Główna</a></li>
+                    <li><a class="navbar__item--active" href="index.html">Geoportal</a></li>
+                    <li><a class="navbar__item" href="index.html">Info</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <input type="text" id="current_center">
+
+    <div class="slide-in__box">
+        <div class="slide-in__slider" id="slide-in__slider">
+            <div class="slide-in__box">
+                <h2 class="slide-in__header">Zaawansowane Menu</h2>
+                <label for="slide-in__search-input" class="slide-in__label">Wyszukiwarka</label>
+                <input class="slide-in__search-input" id="slide-in__search-input" type="text" placeholder="Jakiego miejsca szukasz?">
+                <div class="slide-in__click-box" id="slide-in__box"></div>
+                <div class="slide-in__image-box" id="slide-in__image-box"></div>
+                <!-- <select class="slide-in__countries-list" id="slide-in__countries-list"></select> -->
+            </div>
+            <div id="slide-in__toggle-button" class="slide-in__toggle-button">
+                <img class="slide-in__toggle--arrow" id="slide-in__toggle--arrow" src="assets/mapicons/right-arrow.png" alt="">
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="overlay" id="overlay">
+        <h2 class="overlay__header">Opcje Mapy</h2>
+        <h3 class="overlay__header--small">Gastronomia</h3>
+            <div><label class="overlay__label"><input type="checkbox" id="kebabcheckbox" class="overlay__marker-checkbox">Kebaby</label></div>
+            <div><label class="overlay__label"><input type="checkbox" id="pizzacheckbox" class="overlay__marker-checkbox">Pizzerie</label></div>
+            <div><label class="overlay__label"><input type="checkbox" id="sushicheckbox" class="overlay__marker-checkbox">Sushi</label></div>
+            <div><label class="overlay__label"><input type="checkbox" id="barscheckbox" class="overlay__marker-checkbox">Bary</label></div>
+            <div><label class="overlay__label"><input type="checkbox" id="restaurantcheckbox" class="overlay__marker-checkbox">Restauracje</label></div>
+        <h3 class="overlay__header--small">Turystyka</h3>
+            <div><label class="overlay__label"><input type="checkbox" id="hotelcheckbox" class="overlay__marker-checkbox">Hotele</label></div>
+            <div><label class="overlay__label"><input type="checkbox" id="hostelcheckbox" class="overlay__marker-checkbox">Hostele</label></div>
+            <div><label class="overlay__label"><input type="checkbox" id="churchcheckbox" class="overlay__marker-checkbox">Kościoły</label></div>
+            <div><label class="overlay__label"><input type="checkbox" id="monumentcheckbox" class="overlay__marker-checkbox">Pomniki</label></div>
+        <h3 class="overlay__header--small">Szlaki Rowerowe</h3>
+            <!-- <div><label class="overlay__label"><input type="checkbox" id="biketrackscheckbox" class="overlay__linestring-checkbox">Zielony Szlak</label></div> -->
+    </div>
+
+    <div id="mymap" class="mymap">
+
+    </div>
+
+    <footer class="geoportal-footer">
+        <p><span class="geoportal-footer--bluetag">Created by:</span> Michał Stosio</p>
+        <p><span class="geoportal-footer--bluetag">Contact information: </span>michaustosio@gmail.com</p>
+    </footer>
 </body>
 
 <!-- <script type="text/javascript" src="assets/js/script.js"></script> -->
 <script type="text/javascript" src="assets/js/mymap.js"></script>
-<script src="https://unpkg.com/leaflet.markercluster@1.4.0/dist/leaflet.markercluster.js"></script>
+
 
 </body>
+
 </html>

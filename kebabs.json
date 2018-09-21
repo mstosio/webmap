@@ -6,7 +6,7 @@
 				"restaurant": "kebab",
 				"name": "Akdeniz",
 				"adres": "Sienkiewicza 26",
-				"telefon": "25 785 00 65 "
+				"telefon": "25 785 00 65 "				
 			},
 			"geometry": {
 				"type": "Point",
@@ -22,7 +22,8 @@
 				"restaurant": "kebab",
 				"name": "Iskele",
 				"adres": "10 lutego 20",
-				"telefon": "725 720 725"
+				"telefon": "725 720 725",
+				"img": "assets/photos/iskele-kebab.jpg"
 			},
 			"geometry": {
 				"type": "Point",
@@ -38,7 +39,8 @@
 				"restaurant": "kebab",
 				"name": "Mirakoli",
 				"adres": "Brzeska 134",
-				"telefon": "508 385 229"
+				"telefon": "508 385 229",
+				"img": "assets/photos/mirakoli.jpg"
 			},
 			"geometry": {
 				"type": "Point",
@@ -54,7 +56,8 @@
 				"restaurant": "kebab",
 				"name": "Al Amir",
 				"adres": "Piłsudskiego 74 ",
-				"telefon": "25 632 34 43"
+				"telefon": "25 632 34 43",
+				"img": "assets/photos/al-amir.jpg"
 			},
 			"geometry": {
 				"type": "Point",
@@ -70,7 +73,8 @@
 				"restaurant": "kebab",
 				"name": "Neva",
 				"adres": "Pułaskiego 47",
-				"telefon": "511 332 563"
+				"telefon": "511 332 563",
+				"img": "assets/photos/neva-kebab.jpg"
 			},
 			"geometry": {
 				"type": "Point",
@@ -86,7 +90,8 @@
 				"restaurant": "kebab",
 				"name": "Kebab King",
 				"adres": "Piłsudskiego 72",
-				"telefon": "22 316 37 37"
+				"telefon": "22 316 37 37",
+				"img": "assets/photos/kebab-king.jpg"
 			},
 			"geometry": {
 				"type": "Point",
@@ -102,7 +107,8 @@
 				"restaurant": "kebab",
 				"name": "Restora",
 				"adres": "Sienkiewicza 67",
-				"telefon": "513 407 761"
+				"telefon": "513 407 761",
+				"img": "assets/photos/restora.jpg"
 			},
 			"geometry": {
 				"type": "Point",
@@ -118,7 +124,8 @@
 				"restaurant": "kebab",
 				"name": "Max Kebab",
 				"adres": "Świrskiego 52",
-				"telefon": "570 108 299"
+				"telefon": "570 108 299",
+				"img": "assets/photos/max-kebab.jpg"
 			},
 			"geometry": {
 				"type": "Point",
@@ -134,7 +141,8 @@
 				"restaurant": "kebab",
 				"name": "Station",
 				"adres": "Plac St. Zdanowskiego 1/130",
-				"telefon": "517 517 177"
+				"telefon": "517 517 177",
+				"img": "assets/photos/station.jpg"
 			},
 			"geometry": {
 				"type": "Point",
@@ -150,7 +158,8 @@
 				"restaurant": "pizza",
 				"name": "Factory",
 				"adres": "Sokołowska 157",
-				"telefon": "735 922 922"
+				"telefon": "735 922 922",
+				"img": "assets/photos/factory.jpg"
 			},
 			"geometry": {
 				"type": "Point",
@@ -166,7 +175,8 @@
 				"restaurant": "pizza",
 				"name": "Telepizza",
 				"adres": "Rynkowa 22",
-				"telefon": "25 644 00 00"
+				"telefon": "25 644 00 00",
+				"img": "assets/photos/telepizza.jpg"
 			},
 			"geometry": {
 				"type": "Point",
@@ -182,7 +192,8 @@
 				"restaurant": "pizza",
 				"name": "Mario",
 				"adres": "Norwida 2A",
-				"telefon": "25 633 21 53"
+				"telefon": "25 633 21 53",
+				"img": "assets/photos/mario.jpg"
 			},
 			"geometry": {
 				"type": "Point",
@@ -199,7 +210,8 @@
 				"restaurant": "pizza",
 				"name": "Plejada",
 				"adres": "Starzyńskiego 11",
-				"telefon": "25 632 69 59"
+				"telefon": "25 632 69 59",
+				"img": "assets/photos/plejada.jpg"
 			},
 			"geometry": {
 				"type": "Point",
@@ -215,7 +227,8 @@
 				"restaurant": "pizza",
 				"name": "Verona",
 				"adres": "Sokołowska 37",
-				"telefon": "25 633 35 33"
+				"telefon": "25 633 35 33",
+				"img": "assets/photos/verona.jpg"
 			},
 			"geometry": {
 				"type": "Point",
@@ -231,7 +244,8 @@
 				"restaurant": "pizza",
 				"name": "Italia",
 				"adres": "Browarna 1",
-				"telefon": "25 633 32 13"
+				"telefon": "25 633 32 13",
+				"img": "assets/photos/italia.jpg"
 			},
 			"geometry": {
 				"type": "Point",
@@ -247,7 +261,8 @@
 				"restaurant": "pizza",
 				"name": "Da Grasso",
 				"adres": "Sienkiewicza 12",
-				"telefon": "25 633 98 98"
+				"telefon": "25 633 98 98",
+				"img": "assets/photos/dagrasso.jpg"
 			},
 			"geometry": {
 				"type": "Point",
@@ -263,7 +278,8 @@
 				"restaurant": "pizza",
 				"name": "Presto",
 				"adres": "Piłsudskiego 74",
-				"telefon": "531 551 951"
+				"telefon": "531 551 951",
+				"img": "assets/photos/presto.jpg"
 			},
 			"geometry": {
 				"type": "Point",
@@ -279,7 +295,8 @@
 				"restaurant": "pizza",
 				"name": "Fabryka Smakow",
 				"adres": "Partyzantów 17",
-				"telefon": "25 632 00 00"
+				"telefon": "25 632 00 00",
+				"img": "assets/photos/fabrykasmakow.jpg"
 			},
 			"geometry": {
 				"type": "Point",
@@ -295,7 +312,8 @@
 				"restaurant": "pizza",
 				"name": "Kampa",
 				"adres": "Starowiejska 174",
-				"telefon": "25 633 70 80"
+				"telefon": "25 633 70 80",
+				"img": "assets/photos/kampa.jpg"
 			},
 			"geometry": {
 				"type": "Point",
@@ -311,7 +329,8 @@
 				"restaurant": "pizza",
 				"name": "Piwnica za Rogiem",
 				"adres": "Sokołowska 23",
-				"telefon": "889 010 020"
+				"telefon": "889 010 020",
+				"img": "assets/photos/piwnicazarogiem.jpg"
 			},
 			"geometry": {
 				"type": "Point",
@@ -327,7 +346,8 @@
 				"restaurant": "sushi",
 				"name": "Made in Japan",
 				"adres": "Czerwonego Krzyża 36",
-				"telefon": "609 990 999"
+				"telefon": "609 990 999",
+				"img": "assets/photos/madeinjapan.jpg"
 			},
 			"geometry": {
 				"type": "Point",
@@ -343,7 +363,8 @@
 				"restaurant": "sushi",
 				"name": "Nanatsu",
 				"adres": "Piłsudskiego 74",
-				"telefon": "257410677"
+				"telefon": "257410677",
+				"img": "assets/photos/nanatsu.jpg"
 			},
 			"geometry": {
 				"type": "Point",
@@ -359,7 +380,8 @@
 				"restaurant": "sushi",
 				"name": "Nanatsu",
 				"adres": "Formińskiego 1",
-				"telefon": "25 75 15 223"
+				"telefon": "25 75 15 223",
+				"img": "assets/photos/nanatsu.jpg"
 			},
 			"geometry": {
 				"type": "Point",
@@ -375,7 +397,8 @@
 				"restaurant": "bar",
 				"name": "Pepe Verde",
 				"adres": "Wojskowa 3",
-				"telefon": "25 633 07 00"
+				"telefon": "25 633 07 00",
+				"img": "assets/photos/pepeverde.jpg"
 			},
 			"geometry": {
 				"type": "Point",
@@ -391,7 +414,8 @@
 				"restaurant": "bar",
 				"name": "Piwiarnia Miejska",
 				"adres": "Wojskowa 1",
-				"telefon": "666 660 088"
+				"telefon": "666 660 088",
+				"img": "assets/photos/piwiarniamiejska.jpg"
 			},
 			"geometry": {
 				"type": "Point",
@@ -407,7 +431,8 @@
 				"restaurant": "bar",
 				"name": "Pracownia Rannych Pantofli",
 				"adres": "3 Maja 38",
-				"telefon": "502 799 294"
+				"telefon": "502 799 294",
+				"img": "assets/photos/pracowniarannychpantofli.jpg"
 			},
 			"geometry": {
 				"type": "Point",
@@ -423,7 +448,8 @@
 				"restaurant": "restauracja",
 				"name": "Wolczykij",
 				"adres": "Biskupa Świrskiego 43B",
-				"telefon": "792 596 254"
+				"telefon": "792 596 254",
+				"img": "assets/photos/wolczykij.jpg"
 			},
 			"geometry": {
 				"type": "Point",
@@ -439,7 +465,8 @@
 				"restaurant": "restauracja",
 				"name": "Wolczykij",
 				"adres": "Biskupa Świrskiego 43B",
-				"telefon": "792 596 254"
+				"telefon": "792 596 254",
+				"img": "assets/photos/wolczykij.jpg"
 			},
 			"geometry": {
 				"type": "Point",
@@ -455,7 +482,8 @@
 				"restaurant": "restauracja",
 				"name": "Brofaktura",
 				"adres": "Armii Krajowej 5",
-				"telefon": "25 633 63 33"
+				"telefon": "25 633 63 33",
+				"img": "assets/photos/brofaktura.jpg"
 			},
 			"geometry": {
 				"type": "Point",
@@ -471,7 +499,8 @@
 				"restaurant": "restauracja",
 				"name": "Meat and Fit",
 				"adres": "Piłsudskiego 11",
-				"telefon": "517 212 288,"
+				"telefon": "517 212 288",
+				"img": "assets/photos/meatandfit.jpg"
 			},
 			"geometry": {
 				"type": "Point",
@@ -487,7 +516,8 @@
 				"restaurant": "restauracja",
 				"name": "Kochanówka",
 				"adres": "Kochanowskiego 9",
-				"telefon": "505 172 964,"
+				"telefon": "505 172 964",
+				"img": "assets/photos/kochanowka.jpg"
 			},
 			"geometry": {
 				"type": "Point",
@@ -503,7 +533,8 @@
 				"restaurant": "restauracja",
 				"name": "Zaścianek Polski",
 				"adres": "Asłanowicza 17",
-				"telefon": "25 631-02-29,"
+				"telefon": "25 631-02-29",
+				"img": "assets/photos/zascianekpolski.jpg"
 			},
 			"geometry": {
 				"type": "Point",
@@ -519,7 +550,8 @@
 				"restaurant": "restauracja",
 				"name": "Bollywood Hollywood",
 				"adres": "Wiszniewskiego 4",
-				"telefon": "25 6 332 332,"
+				"telefon": "25 6 332 332",
+				"img": "assets/photos/bollywoodhollywood.jpg"
 			},
 			"geometry": {
 				"type": "Point",
@@ -535,7 +567,8 @@
 				"restaurant": "restauracja",
 				"name": "Omega",
 				"adres": "Starowiejska 24",
-				"telefon": "533 016 016,"
+				"telefon": "533 016 016",
+				"img": "assets/photos/omega.jpg"
 			},
 			"geometry": {
 				"type": "Point",
@@ -551,7 +584,8 @@
 				"restaurant": "restauracja",
 				"name": "Bufet Gastronomiczny PKP",
 				"adres": "pl. Zdanowskiego 1",
-				"telefon": "25 632 66 42,"
+				"telefon": "25 632 66 42",
+				"img": "assets/photos/bufet.jpg"
 			},
 			"geometry": {
 				"type": "Point",
@@ -567,7 +601,8 @@
 				"restaurant": "restauracja",
 				"name": "Patio",
 				"adres": "Plac Tysiąlecia 21",
-				"telefon": "728 949 649,"
+				"telefon": "728 949 649",
+				"img": "assets/photos/patio.jpg"
 			},
 			"geometry": {
 				"type": "Point",
@@ -583,7 +618,8 @@
 				"restaurant": "restauracja",
 				"name": "Kamienica",
 				"adres": "Wojska Polskiego 60",
-				"telefon": "666 455 688,"
+				"telefon": "666 455 688",
+				"img": "assets/photos/kamienica.jpg"
 			},
 			"geometry": {
 				"type": "Point",
@@ -592,7 +628,468 @@
 					52.1660692
 				]
 			}
-		}
-
+		},
+		{
+			"type": "Feature",
+			"properties": {
+			  "type": "kosciol",
+			  "name": "Kościół garnizonowy p.w. Serca Jezusowego",
+					  "adres": "plac Tysiąclecia 2",
+					  "img": "assets/photos/garnizon.jpg"
+			},
+			"geometry": {
+			  "type": "Point",
+			  "coordinates": [
+				22.276212573051453,
+				52.165331277519115
+			  ]
+			}
+		  },
+		  {
+			"type": "Feature",
+			"properties": {
+			  "type": "kosciol",
+			  "name": "Kaplica p.w. Św. Krzyża z II poł. XVIII w.",
+					  "adres": "Starowiejska 13",
+					  "img": "assets/photos/swkrzyza.jpg"
+			},
+			"geometry": {
+			  "type": "Point",
+			  "coordinates": [
+				22.28476610000007,
+				52.1686583
+			  ]
+			}
+		  },
+		  {
+			"type": "Feature",
+			"properties": {
+			  "type": "kosciol",
+			  "name": "Kościół p.w. św. Stanisława biskupa męczennika",
+					  "adres": "Floriańska 3",
+					  "img": "assets/photos/meczennika.jpg"
+			},
+			"geometry": {
+			  "type": "Point",
+			  "coordinates": [
+				22.282625999999937,
+				52.1679509
+			  ]
+			}	
+		  },
+		  {
+			"type": "Feature",
+			"properties": {
+			  "type": "kosciol",
+			  "name": "Siedziba Kurii Biskupiej",
+					  "adres": "Piłsudskiego 62",
+					  "img": "assets/photos/siedziba.jpg"
+			},
+			"geometry": {
+			  "type": "Point",
+			  "coordinates": [
+				22.27324490000001,
+				52.1681502
+			  ]
+			}	
+		  },
+		  {
+			"type": "Feature",
+			"properties": {
+			  "type": "kosciol",
+			  "name": "Kościół katedralny p.w. NPN Marii Panny",
+					  "adres": "Biskupa Ignacego Świrskiego 55",
+					  "img": "assets/photos/katedra.jpg"
+			},
+			"geometry": {
+			  "type": "Point",
+			  "coordinates": [
+				22.27421079999999,
+				52.1696027
+			  ]
+			}	
+		  },
+		  {
+			"type": "Feature",
+			"properties": {
+			  "type": "kosciol",
+			  "name": "Kościół pw. Błogosławionych Męczenników Podlaskich",
+					  "adres": "Ignacego Daszyńskiego 12",
+					  "img": "assets/photos/daszynskiego.jpg"
+			},
+			"geometry": {
+			  "type": "Point",
+			  "coordinates": [
+				22.23564090000002,
+				52.17270389999999
+			  ]
+			}	
+		  },
+		  {
+			"type": "Feature",
+			"properties": {
+			  "type": "kosciol",
+			  "name": "Kościół rzymskokatolicki pw. Bożego Ciała",
+					  "adres": "Monte Cassino 36",
+					  "img": "assets/photos/bozecialo.jpg"
+			},
+			"geometry": {
+			  "type": "Point",
+			  "coordinates": [
+				22.24757999999997,
+				52.1639554
+			  ]
+			}	
+		  },
+		  {
+			"type": "Feature",
+			"properties": {
+			  "type": "kosciol",
+			  "name": "Kościół pw. św. Teresy",
+					  "adres": "Garwolińska 19",
+					  "img": "assets/photos/swteresa.jpg"
+			},
+			"geometry": {
+			  "type": "Point",
+			  "coordinates": [
+				22.25309459999994,
+				52.1563133
+			  ]
+			}	
+		  },
+		  {
+			"type": "Feature",
+			"properties": {
+			  "type": "kosciol",
+			  "name": "Kościół św. Jana Pawła II",
+					  "adres": "Rakowiecka 30",
+					  "img": "assets/photos/janapawla.jpg"
+			},
+			"geometry": {
+			  "type": "Point",
+			  "coordinates": [
+				22.274728500000037,
+				52.1560257
+			  ]
+			}	
+		  },
+		  {
+			"type": "Feature",
+			"properties": {
+			  "type": "pomnik",
+			  "name": "Pomnik Niepodległości",
+					  "adres": "skwer Niepodległości 2",
+					  "img": "assets/photos/pomnikniepodleglosci.jpg"
+			},
+			"geometry": {
+			  "type": "Point",
+			  "coordinates": [
+				22.27489152960959,
+				52.16758804926327
+			  ]
+			}	
+		  },
+		  {
+			"type": "Feature",
+			"properties": {
+			  "type": "pomnik",
+			  "name": "Pomnik Lecha Kaczyńskiego",
+					  "adres": "Wojskowa 19",
+					  "img": "assets/photos/lechkaczynski.jpg"
+			},
+			"geometry": {
+			  "type": "Point",
+			  "coordinates": [
+				22.272626100000025,
+				52.17225
+			  ]
+			}	
+		  },
+		  {
+			"type": "Feature",
+			"properties": {
+			  "type": "pomnik",
+			  "name": "kolumna Powstańców 1863r.",
+					  "adres": "Wojskowa 19",
+					  "img": "assets/photos/powstancow_styczniowych.jpg"
+			},
+			"geometry": {
+			  "type": "Point",
+			  "coordinates": [
+				22.26652443408966,
+				52.162672511401226
+			  ]
+			}	
+		  },
+		  {
+			"type": "Feature",
+			"properties": {
+			  "type": "pomnik",
+			  "name": "Pomnik ku czci Żydów, Ofiar Hitleryzmu",
+					  "adres": "Berka Joselewicza 4",
+					  "img": "assets/photos/kupamiecizydow.jpg"
+			},
+			"geometry": {
+			  "type": "Point",
+			  "coordinates": [
+				22.27804720401764,
+          		52.16867096282168
+			  ]
+			}	
+		  },
+		  {
+			"type": "Feature",
+			"properties": {
+			  "type": "pomnik",
+			  "name": "Pomnik Pamięci Ofiar Represji Okresu Stalinowskiego",
+					  "adres": "Artyleryjska",
+					  "img": "assets/photos/pomnikstalin.jpg"
+			},
+			"geometry": {
+			  "type": "Point",
+			  "coordinates": [
+				22.257914543151855,
+          		52.14639397811603
+			  ]
+			}	
+			},
+			{
+				"type": "Feature",
+				"properties": {
+					"type": "hotel",
+					"name": "Hotel Ibis Styles",
+					"adres": "Jana Pawła II 10",
+					"telefon": "25 308 10 00",
+					"img": "assets/photos/ibis.jpg"
+				},
+				"geometry": {
+					"type": "Point",
+					"coordinates": [
+						22.29692339999997,
+					52.1792221
+					]
+				}	
+				},
+				{
+					"type": "Feature",
+					"properties": {
+						"type": "hotel",
+						"name": "Hotel Villa Park",
+						"adres": "Nauczycielska 12",
+						"telefon": "25 632 30 03",
+						"img": "assets/photos/villapark.jpg"
+					},
+					"geometry": {
+						"type": "Point",
+						"coordinates": [
+							22.28475272655487,
+							52.17392511293232
+						]
+					}	
+				},
+				{
+					"type": "Feature",
+					"properties": {
+						"type": "hotel",
+						"name": "Hotel Arche",
+						"adres": "Brzeska 134",
+						"telefon": "25 644 04 33",
+						"img": "assets/photos/arche.jpg"
+					},
+					"geometry": {
+						"type": "Point",
+						"coordinates": [
+							22.29866100000004,
+							52.1510399
+						]
+					}	
+				},
+				{
+					"type": "Feature",
+					"properties": {
+						"type": "hotel",
+						"name": "Hotel Janusz",
+						"adres": "Pusta 15",
+						"telefon": "25 633 06 66",
+						"img": "assets/photos/janusz.jpg"
+					},
+					"geometry": {
+						"type": "Point",
+						"coordinates": [
+							22.279561899999976,
+							52.1701349
+						]
+					}	
+				},
+				{
+					"type": "Feature",
+					"properties": {
+						"type": "hotel",
+						"name": "Hotel Panorama",
+						"adres": "Okrężna 25",
+						"telefon": "25 644 99 55",
+						"img": "assets/photos/panorama.jpg"
+					},
+					"geometry": {
+						"type": "Point",
+						"coordinates": [
+							22.249342899999988,
+							52.1641499
+						]
+					}	
+				},
+				{
+					"type": "Feature",
+					"properties": {
+						"type": "hotel",
+						"name": "Hotel Garden",
+						"adres": "Jana Kilińskiego 38",
+						"telefon": "25 828 42 50",
+						"img": "assets/photos/garden.jpg"
+					},
+					"geometry": {
+						"type": "Point",
+						"coordinates": [
+							22.274141299999997,
+							52.1624291
+						]
+					}	
+				},
+				{
+					"type": "Feature",
+					"properties": {
+						"type": "hotel",
+						"name": "Zajazd Tip-Top",
+						"adres": "Siedlecka 20",
+						"telefon": "25 641 46 01",
+						"img": "assets/photos/tiptop.jpg"
+					},
+					"geometry": {
+						"type": "Point",
+						"coordinates": [
+							22.212150199999996,
+							52.1728773
+						]
+					}	
+				},
+				{
+					"type": "Feature",
+					"properties": {
+						"type": "hotel",
+						"name": "Zajazd Europa",
+						"adres": "Borki Wyrki 74",
+						"telefon": "25 633 44 44",
+						"img": "assets/photos/tiptop.jpg"
+					},
+					"geometry": {
+						"type": "Point",
+						"coordinates": [
+							22.35087390000001,
+							52.122478
+						]
+					}	
+				},
+				{
+					"type": "Feature",
+					"properties": {
+						"type": "hotel",
+						"name": "Hotel Aleksandria",
+						"adres": "Artyleryjska 33",
+						"telefon": "25 828 43 34",
+						"img": "assets/photos/aleksandria.jpg"
+					},
+					"geometry": {
+						"type": "Point",
+						"coordinates": [
+							22.25734890000001,
+							52.153066
+						]
+					}	
+				},
+				{
+					"type": "Feature",
+					"properties": {
+						"type": "hotel",
+						"name": "Hotel Księżycowa",
+						"adres": "Budowlana 3",
+						"telefon": "507 028 071",
+						"img": "assets/photos/ksiezycowa.jpg"
+					},
+					"geometry": {
+						"type": "Point",
+						"coordinates": [
+							22.293822999999975,
+							52.15427469999999
+						]
+					}	
+				},
+				{
+					"type": "Feature",
+					"properties": {
+						"type": "hotel",
+						"name": "Hotel Hetman",
+						"adres": "Warszawska 133",
+						"telefon": "25 644 30 00",
+						"img": "assets/photos/hetman.jpg"
+					},
+					"geometry": {
+						"type": "Point",
+						"coordinates": [
+							22.232737600000064,
+							52.1694182
+						]
+					}	
+				},
+				{
+					"type": "Feature",
+					"properties": {
+						"type": "hostel",
+						"name": "Noclegi dla Firm",
+						"adres": "Siedlecka 31",
+						"telefon": "509 339 024",
+						"img": "assets/photos/noclegidlafirm.jpg"
+					},
+					"geometry": {
+						"type": "Point",
+						"coordinates": [
+							22.229439599999978,
+							52.1492898
+						]
+					}	
+				},
+				{
+					"type": "Feature",
+					"properties": {
+						"type": "hostel",
+						"name": "Hotelik",
+						"adres": "Łukowska 7A",
+						"telefon": "25 644 87 97",
+						"img": "assets/photos/noclegidlafirm.jpg"
+					},
+					"geometry": {
+						"type": "Point",
+						"coordinates": [
+							22.28627180000001,
+							52.1525816
+						]
+					}	
+				},
+				{
+					"type": "Feature",
+					"properties": {
+						"type": "hostel",
+						"name": "Noclegi U Krysi ",
+						"adres": "Jaśminowa 42",
+						"telefon": "604 780 004",
+						"img": "assets/photos/ukrysi.jpg"
+					},
+					"geometry": {
+						"type": "Point",
+						"coordinates": [
+							22.248450999999932,
+							52.170879
+						]
+					}	
+				}
 	]
 }

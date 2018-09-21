@@ -1,0 +1,105 @@
+.slideshowContainer {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 500px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+  }
+  
+  .imageSlides {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    z-index: -1;
+  }
+
+  .slider-header-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    color: white;
+    text-transform: uppercase;
+    margin: 0 auto;
+    z-index: 1;
+    max-width: 520px;
+    font-size: 45px;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-family: 'Montserrat', extra-bold;
+  }
+
+  .slider-header {
+      margin-top: 100px;
+  }
+
+  .slider-label {
+      font-size: 25px;
+      margin: 0 auto;
+  }
+
+  .slideshowContainer_overlay {
+    background-color: rgba(0, 0, 0, 0.3);
+    min-height: 100%;
+    width: 100%;
+    }
+  
+  .visible-slider {
+    opacity: 1;
+  }
+  
+  .slideshowArrow {
+    font-size: 7em;
+    color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: opacity 0.2s ease-in-out;
+  }
+  
+  .slideshowArrow:hover {
+    opacity: 0.75;
+  }
+  
+  #leftArrow {
+    position: absolute;
+    left: 4%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  #rightArrow {
+    position: absolute;
+    right: 4%;
+    top: 50%;
+    transform: translate(50%, -50%);
+  }
+  
+  .slideshowCircles {
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .circle {
+    display: inline-block;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: solid 2px rgba(255, 255, 255, 0.5);
+    transition: 1s ease-in-out;
+  }
+  
+  .dot {
+    background-color: rgba(255, 255, 255, 0.7);
+    border: solid 2px rgba(255, 255, 255, 0.5);
+  }

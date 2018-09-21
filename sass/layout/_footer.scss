@@ -1,0 +1,16 @@
+.geoportal-footer {
+    display: flex;
+    flex-direction: inherit;
+    justify-content: flex-end;
+    font-family: 'Lato', sans-serif;
+    font-size: 12px;
+    height: 3vh;
+
+    & p {
+        padding: 5px 25px 0 25px;
+    }
+
+    &--bluetag {
+        color: #0078A8;
+    }
+}
