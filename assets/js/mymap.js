@@ -50,7 +50,7 @@ var baseLayers = {
 
 L.control.layers(baseLayers).addTo(mymap);
 
-// importowanie geoJSON przez AJAX call
+//import GeoJSON
 
 var kebabGeoJSON = false;
 fetch('/kebabs.json', {
@@ -58,6 +58,13 @@ fetch('/kebabs.json', {
 })
 	.then(response => response.json())
 	.then(json => {
+		
+		const data = json.features;
+		
+		data.forEach(item => {
+			console.log(item.properties);
+		});
+		
 
 		var geojson = L.geoJSON(json, {
 			style: function (feature) {
@@ -106,11 +113,11 @@ fetch('/kebabs.json', {
 					return L.marker(latlng, {
 						icon: hotelIcon
 					});
-				}  else if (typeProperties === 'hostel') {
+				} else if (typeProperties === 'hostel') {
 					return L.marker(latlng, {
 						icon: hostelIcon
 					});
-				} 
+				}
 			},
 			onEachFeature: function (feature, layer) {
 
@@ -148,19 +155,19 @@ fetch('/kebabs.json', {
 
 				layer.addEventListener('click', function () {
 					const overlay = document.getElementById("slide-in__box");
-						const imageBox = document.getElementById("slide-in__image-box");
-						const name = layer.feature.properties.name;
-						const telephone = layer.feature.properties.telefon;
-						const adres = layer.feature.properties.adres;
-						const img = '<img src="' + layer.feature.properties.img + '" />';
-					
-					if (layer.feature.properties.restaurant || layer.feature.properties.type === 'hotel' || layer.feature.properties.type === 'hostel') {				
+					const imageBox = document.getElementById("slide-in__image-box");
+					const name = layer.feature.properties.name;
+					const telephone = layer.feature.properties.telefon;
+					const adres = layer.feature.properties.adres;
+					const img = '<img src="' + layer.feature.properties.img + '" />';
+
+					if (layer.feature.properties.restaurant || layer.feature.properties.type === 'hotel' || layer.feature.properties.type === 'hostel') {
 						overlay.innerHTML = name + "<br><br>" + '<img src=\'assets/mapicons/phone-receiver.png\'>' + "  " + telephone + "<br><br>" + '<img src=\'assets/mapicons/location.png\'>' + "  " + adres + "<br>";
-						imageBox.innerHTML = img;			
-					} else if (layer.feature.properties.type === 'kosciol' || layer.feature.properties.type === 'pomnik' ){
-						overlay.innerHTML = name + "<br><br>"+ '<img src=\'assets/mapicons/location.png\'>' + "  " + adres + "<br>";
 						imageBox.innerHTML = img;
-					} 
+					} else if (layer.feature.properties.type === 'kosciol' || layer.feature.properties.type === 'pomnik') {
+						overlay.innerHTML = name + "<br><br>" + '<img src=\'assets/mapicons/location.png\'>' + "  " + adres + "<br>";
+						imageBox.innerHTML = img;
+					}
 
 					displayOverlayLayer();
 				});
@@ -231,7 +238,7 @@ fetch('/kebabs.json', {
 					const monument = feature.properties.type === 'kosciol';
 					const monumentImg = document.querySelectorAll('img[src="assets/mapicons/monument.png"]');
 					if (monument) {
-						 monumentImg.forEach(function (monu) {
+						monumentImg.forEach(function (monu) {
 							monu.classList.toggle("display");
 						})
 					}
@@ -241,7 +248,7 @@ fetch('/kebabs.json', {
 					const hotel = feature.properties.type === 'hotel';
 					const hotelImg = document.querySelectorAll('img[src="assets/mapicons/hotel.png"]');
 					if (hotel) {
-						 hotelImg.forEach(function (hote) {
+						hotelImg.forEach(function (hote) {
 							hote.classList.toggle("display");
 						})
 					}
@@ -251,7 +258,7 @@ fetch('/kebabs.json', {
 					const hostel = feature.properties.type === 'hostel';
 					const hostelImg = document.querySelectorAll('img[src="assets/mapicons/hostel.png"]');
 					if (hostel) {
-						 hostelImg.forEach(function (hot) {
+						hostelImg.forEach(function (hot) {
 							hot.classList.toggle("display");
 						})
 					}
@@ -284,7 +291,7 @@ fetch('/bike.json', {
 })
 	.then(response => response.json())
 	.then(json => {
-		
+
 
 
 		var geojson = L.geoJSON(json, {
@@ -311,25 +318,25 @@ fetch('/bike.json', {
 						feature.properties.mile
 					);
 				};
-				
+
 				const bikeCheckbox = document.getElementById('biketrackscheckbox');
 
-				bikeCheckbox.addEventListener('click', function(layer) {
+				bikeCheckbox.addEventListener('click', function (layer) {
 					const bikeCheckbox = document.getElementById('biketrackscheckbox');
-					
+
 					geojson.eachLayer(function (layer) {
-						if (mymap.hasLayer(layer)) {			
+						if (mymap.hasLayer(layer)) {
 							mymap.removeLayer(layer);
 						} else {
 							layer.addTo(mymap);
 						}
 					})
-				
-						
-					
-					});
-				
-				
+
+
+
+				});
+
+
 			},
 
 

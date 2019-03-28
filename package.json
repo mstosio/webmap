@@ -9,6 +9,6 @@
   "author": "Michal Stosio",
   "license": "ISC",
   "devDependencies": {
-    "node-sass": "^4.9.3"
+    "node-sass": "^4.11.0"
   }
 }

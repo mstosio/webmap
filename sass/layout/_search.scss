@@ -1,0 +1,19 @@
+.places-info {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  
+}
+
+.places-info__search-bar {
+    grid-column: 1 / 2;
+    display: flex;
+    flex-direction: column;
+    height: 1000px;
+    font-size: 2rem;
+}
+
+.places-info__map {
+    grid-column: 3/6;
+    
+}
+
