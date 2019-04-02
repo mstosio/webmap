@@ -29,6 +29,10 @@ main {
 .places-info__map {
   grid-column: 3/6; }
 
+.search-map {
+  height: 100%;
+  width: 100%; }
+
 .leaflet-popup {
   margin-bottom: -20px !important; }
 
