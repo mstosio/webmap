@@ -4,11 +4,30 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass sass/main.scss assets/css/style.css -w"
+    "compile:sass": "node-sass sass/main.scss assets/css/style.css -w",
+    "dev": "webpack --mode development --watch",
+    "build": "webpack --mode production",
+    "start": "webpack-dev-server --watch --development --open"
   },
   "author": "Michal Stosio",
   "license": "ISC",
   "devDependencies": {
-    "node-sass": "^4.11.0"
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "babel-loader": "^8.0.5",
+    "browser-sync": "^2.26.3",
+    "browser-sync-webpack-plugin": "^2.2.2",
+    "css-loader": "^2.1.1",
+    "file-loader": "^3.0.1",
+    "leaflet": "^1.4.0",
+    "mapbox": "^1.0.0-beta10",
+    "node-sass": "^4.11.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.2.1"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.26.0"
   }
 }

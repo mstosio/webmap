@@ -1,7 +1,7 @@
 //Funkcja, sprawia, że wszystkie checkboxy są zaznaczone podczas załadowania strony
 
 window.onload = onPageLoad();
-
+console.log("hello");
 function onPageLoad() {
 	const kebs = document.getElementsByClassName("overlay__marker-checkbox");
 	const checkboxes = document.querySelectorAll("checkbox");
@@ -9,10 +9,7 @@ function onPageLoad() {
 		kebs[i].checked = true;
 	}
 }
-
 // MAP INTERACTIVITY
-
-
 const mymap = L.map('mymap').setView([52.167930660117555, 22.271411418914795], 15);
 
 var firstOverlay = L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
@@ -60,10 +57,6 @@ fetch('/kebabs.json', {
 	.then(json => {
 		
 		const data = json.features;
-		
-		data.forEach(item => {
-			console.log(item.properties);
-		});
 		
 
 		var geojson = L.geoJSON(json, {
@@ -346,7 +339,7 @@ fetch('/bike.json', {
 
 
 var searchInput = document.getElementById('slide-in__search-input');
-console.log(searchInput);
+
 
 
 

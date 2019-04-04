@@ -1,36 +1,56 @@
 # Geoportal Siedlce
 
-This is my personal project which is showing all of decent places around Siedlce city. 
+This is my personal project about all decent places you can visit around Siedlce city. You can share it with your friends who wanna visit this small city.
 
 ## What's that?
 
 
-### Prerequisites
+### Tech used
 
+Javascript
+LeafletJS
 
-### Installing
+## Developing
+
+Here's a brief intro about what a developer must do in order to start developing
+the project further:
+
+```shell
+git clone https://github.com/mstosio/webmap.git
+cd webmap/
+npm install
+```
+
+### Installing / Getting started
 
 Before running app, install needed dependencies.
 
 ```
-npm install node-sass
+npm install 
 ```
 
-After:
-
-```
-npm install live-server
-```
-
-For compiling auto compiling SASS use:
+For auto compiling SASS use:
 
 ```
 npm run compile:sass
 ```
 
-For running live-server on your local machine use:
+For bundling your files in development mode, this mode includes --watch and easily can work as live-server:
 
 ```
-live-server
+npm run dev
 ```
 
+For bundling your files in production mode (the files will be compressed):
+
+```
+npm run build
+```
+
+For running webpack devserver on your local machine:
+
+```
+npm start
+```
+
+Webpack config includes whole Babel config, so you are able to use ES6+ features.
