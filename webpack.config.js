@@ -2,10 +2,14 @@ const path = require('path');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
 
 module.exports = {
-    entry: ['babel-polyfill', './assets/js/mymap.js'],
+    entry: {
+        search: './assets/js/search.js',
+        map: './assets/js/mymap.js',
+        index: './assets/js/index.js'
+      },
     output: {
         path: path.resolve(__dirname, 'bundle'),
-        filename: 'bundle.js'
+        filename: '[name].js'
     },
     devServer: {
         contentBase: './'

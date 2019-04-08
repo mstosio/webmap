@@ -1,18 +1,18 @@
 //Funkcja, sprawia, że wszystkie checkboxy są zaznaczone podczas załadowania strony
-
+alert("ayyesds");
 window.onload = onPageLoad();
-console.log("hello");
+
 function onPageLoad() {
 	const kebs = document.getElementsByClassName("overlay__marker-checkbox");
 	const checkboxes = document.querySelectorAll("checkbox");
-	for (var i = 0; i < kebs.length; i++) {
+	for (let i = 0; i < kebs.length; i++) {
 		kebs[i].checked = true;
 	}
 }
 // MAP INTERACTIVITY
 const mymap = L.map('mymap').setView([52.167930660117555, 22.271411418914795], 15);
 
-var firstOverlay = L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+const firstOverlay = L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
 	maxZoom: 18,
 	attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
 		'<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
@@ -21,24 +21,24 @@ var firstOverlay = L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}
 });
 
 
-var secondOverlay = L.tileLayer('http://{s}.tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png', {
+const secondOverlay = L.tileLayer('http://{s}.tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png', {
 	maxZoom: 18,
 	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 });
 
-var thirdOverlay = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+const thirdOverlay = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 	maxZoom: 19,
 	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 });
 
-var fourthOverlay = L.tileLayer('https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', {
+const fourthOverlay = L.tileLayer('https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', {
 	maxZoom: 18,
 	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 });
 
 firstOverlay.addTo(mymap);
 
-var baseLayers = {
+const baseLayers = {
 	"Domyślne": firstOverlay,
 	"Black and White": secondOverlay,
 	"Open Street Map": thirdOverlay,
@@ -49,7 +49,7 @@ L.control.layers(baseLayers).addTo(mymap);
 
 //import GeoJSON
 
-var kebabGeoJSON = false;
+let kebabGeoJSON = false;
 fetch('/kebabs.json', {
 	method: 'GET'
 })
@@ -59,7 +59,7 @@ fetch('/kebabs.json', {
 		const data = json.features;
 		
 
-		var geojson = L.geoJSON(json, {
+		let geojson = L.geoJSON(json, {
 			style: function (feature) {
 				return {
 					color: '#000',
@@ -278,67 +278,67 @@ fetch('/kebabs.json', {
 	})
 	.catch(error => console.log(error.message));
 
-var kebabGeoJSON = false;
-fetch('/bike.json', {
-	method: 'GET'
-})
-	.then(response => response.json())
-	.then(json => {
+// let kebabGeoJSON = false;
+// fetch('/bike.json', {
+// 	method: 'GET'
+// })
+// 	.then(response => response.json())
+// 	.then(json => {
 
 
 
-		var geojson = L.geoJSON(json, {
-			// if(feature.properties.name === 'trasa zalew'){
+// 		let geojson = L.geoJSON(json, {
+// 			// if(feature.properties.name === 'trasa zalew'){
 
-			// }
-			style: function (feature) {
-				return {
-					stroke: true,
-					color: "red",
-					weight: 3
-				}
-			},
-			onEachFeature: function (feature, layer) {
-				if (feature.properties.name = "trasa zalew") {
-					layer.setStyle({
-						'color': feature.properties.color,
-					});
-				}
+// 			// }
+// 			style: function (feature) {
+// 				return {
+// 					stroke: true,
+// 					color: "red",
+// 					weight: 3
+// 				}
+// 			},
+// 			onEachFeature: function (feature, layer) {
+// 				if (feature.properties.name = "trasa zalew") {
+// 					layer.setStyle({
+// 						'color': feature.properties.color,
+// 					});
+// 				}
 
-				if (feature.geometry.type === 'LineString') {
-					layer.bindPopup(
-						feature.properties.name + "<br>Długość: " +
-						feature.properties.mile
-					);
-				};
+// 				if (feature.geometry.type === 'LineString') {
+// 					layer.bindPopup(
+// 						feature.properties.name + "<br>Długość: " +
+// 						feature.properties.mile
+// 					);
+// 				};
 
-				const bikeCheckbox = document.getElementById('biketrackscheckbox');
+// 				const bikeCheckbox = document.getElementById('biketrackscheckbox');
 
-				bikeCheckbox.addEventListener('click', function (layer) {
-					const bikeCheckbox = document.getElementById('biketrackscheckbox');
+// 				bikeCheckbox.addEventListener('click', function (layer) {
+// 					const bikeCheckbox = document.getElementById('biketrackscheckbox');
 
-					geojson.eachLayer(function (layer) {
-						if (mymap.hasLayer(layer)) {
-							mymap.removeLayer(layer);
-						} else {
-							layer.addTo(mymap);
-						}
-					})
-
-
-
-				});
+// 					geojson.eachLayer(function (layer) {
+// 						if (mymap.hasLayer(layer)) {
+// 							mymap.removeLayer(layer);
+// 						} else {
+// 							layer.addTo(mymap);
+// 						}
+// 					})
 
 
-			},
+
+// 				});
 
 
-		}).addTo(mymap);
-	})
-	.catch(error => console.log(error.message));
+// 			},
 
 
-var searchInput = document.getElementById('slide-in__search-input');
+// 		}).addTo(mymap);
+// 	})
+// 	.catch(error => console.log(error.message));
+
+
+const searchInput = document.getElementById('slide-in__search-input');
 
 
 
