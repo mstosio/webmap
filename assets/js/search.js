@@ -15,18 +15,14 @@ const firstOverlay = L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{
 firstOverlay.addTo(mymap);
 //main state of the app
 
-var elements = {
-	listOfItems: 'document.querySelectorAll(".search-bar__item")',
-};
+// var elements = {
+// 	listOfItems: document.querySelectorAll(".search-bar__item")
+// };
 
-console.log(elements.listOfItems);
-
-
-
-
+// console.log(elements.listOfItems);
+// console.log(elements);
 
 let state = {};
-
 
 //BASE
 
@@ -49,7 +45,21 @@ class Search {
 			let searchBox = document.querySelector(".places-info__search-bar");
 
 			data.forEach(item => {
-				searchBox.innerHTML += `<div class="search-bar__item" data-id="item-${item.properties.id}">${item.properties.name}</div>`;
+				// searchBox.innerHTML += `<div class="places-info__title" data-id="item-${item.properties.id}">${item.properties.name}</div>`;
+
+				searchBox.innerHTML += ` 
+				<div class="places-info__element" data-id="item-${item.properties.id}">
+					<div class="places-info__box">
+							<div class="places-info__title" >
+								<h4 class="places-info__name">${item.properties.name}</h4>
+								<p>${item.properties.type}</p>
+							</div>
+							<div class="places-info__details">
+								<p>${item.properties.adres}</p>
+								<p>${item.properties.telefon}</p>
+							</div>
+					</div>
+				</div>`
 			});
 
 		} catch(error){
@@ -59,10 +69,6 @@ class Search {
 }
 };
 
-
-
-
-
 //add click event on each item and flies to marker on the map
 const findTheMarker = async () => {
 		
@@ -71,18 +77,18 @@ const findTheMarker = async () => {
 		await state.search.getData()
 		
 		const data = state.search.result;
-		const listOfItems = document.querySelectorAll(".search-bar__item");
+		const listOfItems = document.querySelectorAll(".places-info__element");
 		let marker = null;
 
 
-					elements.listOfItems.forEach(listItem => {
+				listOfItems.forEach(listItem => {
 						listItem.addEventListener("click", function(e){
 
 							data.forEach(item => {
 								const clickedItemId = parseFloat(listItem.dataset.id.split("-")[1]);
 								const dataItemId = item.properties.id;
 
-								if(clickedItemId == dataItemId){
+								if(clickedItemId === dataItemId){
 
 									const [dataLat, dataLng ] = [
 										item.geometry.coordinates[0],
@@ -106,4 +112,3 @@ const findTheMarker = async () => {
 const search = new Search();
 search.getData();
 findTheMarker();
-// console.log(state);
