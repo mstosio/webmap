@@ -4,8 +4,8 @@ import Search from './Search';
 //Global state
 const state = {};
 
-const search = new Search();
-search.getData();
+// const search = new Search();
+// search.getData();
 
 
 
