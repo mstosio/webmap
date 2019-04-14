@@ -1,6 +1,4 @@
-import { mymap, addMapView } from './mapOverlay';
-import { elementsDOM } from './elements';
-// import { mymap } from './mapOverlay';
+import { mymap } from './mapOverlay';
 
 
 //add click event on each item and flies to marker on the map
