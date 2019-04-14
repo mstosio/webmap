@@ -1,22 +1,24 @@
 import Search from './Search';
+import { displayData } from './displayData';
+import { findTheMarker } from './findTheMarker';
+import { addMapView } from './mapOverlay';
 
 
 //Global state
 const state = {};
 
-// const search = new Search();
-// search.getData();
+const controlData = async () => {
+    addMapView();
 
+    state.search = new Search();
 
+    await state.search.getData();
 
-// const displayData = async () => {
-//     const query = '';
+    let data = state.search.result;
 
-//     state.search = new Search(query);
+    displayData(data);
 
+    findTheMarker(data);
+};
 
-//     await state.search.getData();
-
-//     console.log(state.search.result);
-// }
-
+controlData();
