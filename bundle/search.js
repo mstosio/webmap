@@ -94,7 +94,7 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"elementsDOM\", function() { return elementsDOM; });\nvar elementsDOM = {\n  searchBox: document.querySelector(\".places-info__search-bar\"),\n  listOfItems: document.querySelectorAll(\".places-info__element\"),\n  searchInput: document.querySelector(\".search-input\"),\n  searchButton: document.querySelector(\".search-button\")\n};\n\n//# sourceURL=webpack:///./assets/js/elements.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"elementsDOM\", function() { return elementsDOM; });\nvar elementsDOM = {\n  searchBox: document.querySelector(\".places-info__search-bar\"),\n  listOfItems: document.querySelectorAll(\".places-info__element\"),\n  searchInput: document.querySelector(\".search-input\"),\n  searchButton: document.querySelector(\".search-button\"),\n  buttonBox: document.querySelector(\".places-info__button-box\")\n};\n\n//# sourceURL=webpack:///./assets/js/elements.js?");
 
 /***/ }),
 
@@ -106,7 +106,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _elements_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./elements.js */ \"./assets/js/elements.js\");\n\nconsole.log(_elements_js__WEBPACK_IMPORTED_MODULE_0__[\"elementsDOM\"]);\n\n//# sourceURL=webpack:///./assets/js/search.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _elements_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./elements.js */ \"./assets/js/elements.js\");\n\n\n//# sourceURL=webpack:///./assets/js/search.js?");
 
 /***/ })
 

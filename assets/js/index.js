@@ -1,5 +1,5 @@
 import Data from './data';
-import { displayData, paginationData } from './displayData';
+import { paginationData } from './displayData';
 import { findTheMarker } from './findTheMarker';
 import { addMapView } from './mapOverlay';
 import { elementsDOM } from './elements.js';
@@ -18,20 +18,22 @@ const controlData = async () => {
     let data = state.search.result;
 
     paginationData(data);
-    // displayData(data);
 
     findTheMarker(data);
 };
 
 
-controlData();
+elementsDOM.buttonBox.addEventListener('click', function(e){
 
-elementsDOM.searchBox.addEventListener('click', function(e){
     const button = e.target.closest('button');
-
     if(button){
-        const navigateToPage = button.dataset.sitenumber;
-        console.log(navigateToPage);
+        const navigateToPage = parseInt(button.dataset.sitenumber, 10); 
+        
         paginationData(state.search.result, navigateToPage);
+
+        findTheMarker(state.search.result);
+     
     }
 })
+
+controlData();

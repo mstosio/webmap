@@ -17,6 +17,10 @@
     font-size: $small-font;
     display: flex;
     justify-content: space-between;
+
+    &--active {
+        box-shadow: 0 10px 10px 0 rgba(0,0,0,0.05), 0 10px 10px 0 rgba(0,0,0,0.04);
+    }
 }
 
 
@@ -29,9 +33,8 @@
     grid-column: 1 / 3;
     display: flex;
     flex-direction: column;
-    height: 1000px;
     font-size: 2rem;
-    overflow: auto;
+
     height: 90vh;
 }
 
@@ -40,6 +43,13 @@
     
 }
 
+
+
+.places-info__button-box {
+    grid-column: 1 / 3;
+    z-index: 9999;
+    grid-row: 5/6;
+}
 
 .search-map { 
     height: 100%;

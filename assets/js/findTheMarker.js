@@ -1,14 +1,25 @@
 import { mymap } from './mapOverlay';
 
-
+let marker = null;
+let lastClicked;
 //add click event on each item and flies to marker on the map
 export const findTheMarker = (data) => {
     const listOfItems = document.querySelectorAll(".places-info__element");
-    let marker = null;
-    
+   
             listOfItems.forEach(listItem => {
                     listItem.addEventListener("click", function(e){
+                        
+                        let clickedItem = e.target.closest(".places-info__box");
+                     
+                        if(lastClicked) {
+                            lastClicked.classList.remove("places-info__box--active");
+                        }
+                      
+                        clickedItem.classList.add("places-info__box--active");
+                        
+                        lastClicked = clickedItem;
 
+                       
                         data.forEach(item => {
                             const clickedItemId = parseFloat(listItem.dataset.id.split("-")[1]);
                             const dataItemId = item.properties.id;

@@ -20,8 +20,16 @@ export const displayData = item => {
 			// });
 };
 
+export const clearBox = () => {
+	elementsDOM.searchBox.innerHTML = '';
+	elementsDOM.buttonBox.innerHTML = '';
+}
+
+
+//PAGINATION
+
 const createButton = (page, typeButton) => `
-	<button class="places-info__button button-${typeButton} data-sitenumber=${typeButton === 'prev' ? page-1 : page+1}"><span>Page ${typeButton === 'prev' ? page-1 : page+1}</span></button>
+	<button class="places-info__button button-${typeButton}" data-sitenumber="${typeButton === 'prev' ? page-1 : page+1}"><span>Page ${typeButton === 'prev' ? page-1 : page+1}</span></button>
 	
 `;
 
@@ -33,24 +41,33 @@ const getButtons = (page, resultNumber, itemPerPage) => {
 	if(page === 1 && pagesNumber > 1){
 		button = createButton(page, 'next');
 	} else if (page < pagesNumber){
-		// button = `
-		// ${createButton(page, 'prev')}
-		// ${createButton(page, 'next')}
-		// `;	
-		console.log("kloc");
+		button = `
+		${createButton(page, 'prev')}
+		${createButton(page, 'next')}
+		`;	
+	
 		
 	} else if (page === pagesNumber && pagesNumber > 1){
 		button = createButton(page, 'prev');
 	} 
-	elementsDOM.searchBox.insertAdjacentHTML('beforeend', button);
+	elementsDOM.buttonBox.insertAdjacentHTML('beforeend', button);
+
 };
 
 
-export const paginationData = (data, page = 1, itemPerPage = 10) => {
+export const paginationData = (data, page = 1, itemPerPage = 6) => {
 	const start = (page - 1) * itemPerPage;
 	const end = page * itemPerPage;
+	clearBox();
 
-	data.slice(start, end).forEach(displayData);
+	//sort Data by name
+	let sortedData = data.sort((firstPlace, secondPlace) => {
+		const nameFirst = firstPlace.properties.name;
+		const nameSecond = secondPlace.properties.name;
+		return (nameFirst < nameSecond ) ? -1 : (nameFirst > nameSecond) ? 1 : 0;
+	});
 
+
+	sortedData.slice(start, end).forEach(displayData);
 	getButtons(page, data.length, itemPerPage);
 }
