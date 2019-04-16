@@ -71,3 +71,9 @@ export const paginationData = (data, page = 1, itemPerPage = 6) => {
 	sortedData.slice(start, end).forEach(displayData);
 	getButtons(page, data.length, itemPerPage);
 }
+
+elementsDOM.listOfItems.forEach(listItem => {
+	listItem.addEventListener("click", function(e){
+
+	});
+});

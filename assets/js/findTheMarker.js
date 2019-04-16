@@ -8,7 +8,7 @@ export const findTheMarker = (data) => {
    
             listOfItems.forEach(listItem => {
                     listItem.addEventListener("click", function(e){
-                        
+                      
                         let clickedItem = e.target.closest(".places-info__box");
                      
                         if(lastClicked) {
@@ -40,7 +40,6 @@ export const findTheMarker = (data) => {
                         });
                     });
                 });
-
 };
 
 

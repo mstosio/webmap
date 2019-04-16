@@ -3,6 +3,7 @@ import { paginationData } from './displayData';
 import { findTheMarker } from './findTheMarker';
 import { addMapView } from './mapOverlay';
 import { elementsDOM } from './elements.js';
+import { displayInfo } from './displayInfo';
 
 
 //Global state
@@ -34,6 +35,19 @@ elementsDOM.buttonBox.addEventListener('click', function(e){
         findTheMarker(state.search.result);
      
     }
-})
+});
+
+let lastClicked = null;
+
+//EVENT DELEGATION HAPPENS
+elementsDOM.searchBox.addEventListener('click', function(e){
+  
+
+
+    if(!e.target.closest('.places-info__box')) return;
+
+    displayInfo(state.search.result);
+  
+});
 
 controlData();
