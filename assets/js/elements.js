@@ -3,5 +3,7 @@ export const elementsDOM = {
     listOfItems: document.querySelectorAll(".places-info__element"),
     searchInput: document.querySelector(".search-input"),
     searchButton: document.querySelector(".search-button"),
-    buttonBox: document.querySelector(".places-info__button-box")
+    buttonBox: document.querySelector(".places-info__button-box"),
+    elementsBox: document.querySelector(".places-info__elements"),
+    widget: document.querySelector(".widget")
 }

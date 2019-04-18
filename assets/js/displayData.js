@@ -9,10 +9,7 @@ export const displayData = item => {
 								<h4 class="places-info__name">${item.properties.name}</h4>
 								<p>${item.properties.type}</p>
 							</div>
-							<div class="places-info__details">
-								<p>${item.properties.adres}</p>
-								<p>${item.properties.telefon}</p>
-							</div>
+						
 					</div>
 				</div>`
                
@@ -29,7 +26,7 @@ export const clearBox = () => {
 //PAGINATION
 
 const createButton = (page, typeButton) => `
-	<button class="places-info__button button-${typeButton}" data-sitenumber="${typeButton === 'prev' ? page-1 : page+1}"><span>Page ${typeButton === 'prev' ? page-1 : page+1}</span></button>
+	<button class="button button--${typeButton}" data-sitenumber="${typeButton === 'prev' ? page-1 : page+1}"><span>Page ${typeButton === 'prev' ? page-1 : page+1}</span></button>
 	
 `;
 
@@ -55,7 +52,36 @@ const getButtons = (page, resultNumber, itemPerPage) => {
 };
 
 
-export const paginationData = (data, page = 1, itemPerPage = 6) => {
+//get the height of actual box
+
+//get the height of parent element
+
+
+
+
+let heightOfSmallbox = 70;
+const searchBar = document.querySelector(".places-info__search-bar").getBoundingClientRect().height;
+// console.log(searchBar);
+
+
+
+
+
+const countDisplayItems = (height, boxHeight, count = 0) => {
+	if(boxHeight < 0) {
+		return count;
+	} else {
+		return countDisplayItems(height, boxHeight - height, count + 1);
+	};
+};
+
+var displayCanFitBox = countDisplayItems(120, searchBar, 0);
+
+
+
+
+
+export const paginationData = (data, page = 1, itemPerPage = (displayCanFitBox-1)) => {
 	const start = (page - 1) * itemPerPage;
 	const end = page * itemPerPage;
 	clearBox();
@@ -69,6 +95,7 @@ export const paginationData = (data, page = 1, itemPerPage = 6) => {
 
 
 	sortedData.slice(start, end).forEach(displayData);
+
 	getButtons(page, data.length, itemPerPage);
 }
 

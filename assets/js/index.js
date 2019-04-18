@@ -37,16 +37,15 @@ elementsDOM.buttonBox.addEventListener('click', function(e){
     }
 });
 
-let lastClicked = null;
 
 //EVENT DELEGATION HAPPENS
 elementsDOM.searchBox.addEventListener('click', function(e){
   
+    if(!e.target.closest('.places-info__element')) return;
 
+    const clickedId = e.target.closest('.places-info__element').dataset.id;
 
-    if(!e.target.closest('.places-info__box')) return;
-
-    displayInfo(state.search.result);
+    displayInfo(state.search.result, clickedId);
   
 });
 
