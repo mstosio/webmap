@@ -47,9 +47,15 @@ button, .button:link, .button:visited {
   button:active, .button:link:active, .button:visited:active {
     transform: translateY(3px); }
 
+.category__list {
+  display: flex;
+  list-style-type: none; }
+  .category__list__item {
+    padding-left: 10px; }
+
 .places-info {
   display: grid;
-  height: 90vh;
+  height: 80vh;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(6, 1fr); }
 
@@ -280,6 +286,9 @@ button, .button:link, .button:visited {
     height: 70px;
     width: 70px;
     margin: 0; }
+
+.category {
+  height: 10vh; }
 
 .geoportal-footer {
   display: flex;

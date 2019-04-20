@@ -1,0 +1,8 @@
+.category__list {
+    display: flex;
+    list-style-type: none;
+    
+    &__item {
+        padding-left: 10px;
+    }
+}

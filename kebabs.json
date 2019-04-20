@@ -4,7 +4,7 @@
     {
       "type": "Feature",
       "properties": {
-        "restaurant": "kebab",
+        "type": "kebab",
         "name": "Akdeniz",
         "adres": "Sienkiewicza 26",
         "telefon": "25 785 00 65 ",
@@ -21,7 +21,7 @@
     {
       "type": "Feature",
       "properties": {
-        "restaurant": "kebab",
+        "type": "kebab",
         "name": "Iskele",
         "adres": "10 lutego 20",
         "telefon": "725 720 725",
@@ -39,7 +39,7 @@
     {
       "type": "Feature",
       "properties": {
-        "restaurant": "kebab",
+        "type": "kebab",
         "name": "Mirakoli",
         "adres": "Brzeska 134",
         "telefon": "508 385 229",
@@ -57,7 +57,7 @@
     {
       "type": "Feature",
       "properties": {
-        "restaurant": "kebab",
+        "type": "kebab",
         "name": "Al Amir",
         "adres": "Piłsudskiego 74 ",
         "telefon": "25 632 34 43",
@@ -75,7 +75,7 @@
     {
       "type": "Feature",
       "properties": {
-        "restaurant": "kebab",
+        "type": "kebab",
         "name": "Neva",
         "adres": "Pułaskiego 47",
         "telefon": "511 332 563",
@@ -93,7 +93,7 @@
     {
       "type": "Feature",
       "properties": {
-        "restaurant": "kebab",
+        "type": "kebab",
         "name": "Kebab King",
         "adres": "Piłsudskiego 72",
         "telefon": "22 316 37 37",
@@ -111,7 +111,7 @@
     {
       "type": "Feature",
       "properties": {
-        "restaurant": "kebab",
+        "type": "kebab",
         "name": "Restora",
         "adres": "Sienkiewicza 67",
         "telefon": "513 407 761",
@@ -129,7 +129,7 @@
     {
       "type": "Feature",
       "properties": {
-        "restaurant": "kebab",
+        "type": "kebab",
         "name": "Max Kebab",
         "adres": "Świrskiego 52",
         "telefon": "570 108 299",
@@ -147,7 +147,7 @@
     {
       "type": "Feature",
       "properties": {
-        "restaurant": "kebab",
+        "type": "kebab",
         "name": "Station",
         "adres": "Plac St. Zdanowskiego 1/130",
         "telefon": "517 517 177",
@@ -165,7 +165,7 @@
     {
       "type": "Feature",
       "properties": {
-        "restaurant": "pizza",
+        "type": "pizza",
         "name": "Factory",
         "adres": "Sokołowska 157",
         "telefon": "735 922 922",
@@ -183,7 +183,7 @@
     {
       "type": "Feature",
       "properties": {
-        "restaurant": "pizza",
+        "type": "pizza",
         "name": "Telepizza",
         "adres": "Rynkowa 22",
         "telefon": "25 644 00 00",
@@ -201,7 +201,7 @@
     {
       "type": "Feature",
       "properties": {
-        "restaurant": "pizza",
+        "type": "pizza",
         "name": "Mario",
         "adres": "Norwida 2A",
         "telefon": "25 633 21 53",
@@ -219,7 +219,7 @@
     {
       "type": "Feature",
       "properties": {
-        "restaurant": "pizza",
+        "type": "pizza",
         "name": "Plejada",
         "adres": "Starzyńskiego 11",
         "telefon": "25 632 69 59",
@@ -237,7 +237,7 @@
     {
       "type": "Feature",
       "properties": {
-        "restaurant": "pizza",
+        "type": "pizza",
         "name": "Verona",
         "adres": "Sokołowska 37",
         "telefon": "25 633 35 33",
@@ -255,7 +255,7 @@
     {
       "type": "Feature",
       "properties": {
-        "restaurant": "pizza",
+        "type": "pizza",
         "name": "Italia",
         "adres": "Browarna 1",
         "telefon": "25 633 32 13",
@@ -273,7 +273,7 @@
     {
       "type": "Feature",
       "properties": {
-        "restaurant": "pizza",
+        "type": "pizza",
         "name": "Da Grasso",
         "adres": "Sienkiewicza 12",
         "telefon": "25 633 98 98",
@@ -291,7 +291,7 @@
     {
       "type": "Feature",
       "properties": {
-        "restaurant": "pizza",
+        "type": "pizza",
         "name": "Presto",
         "adres": "Piłsudskiego 74",
         "telefon": "531 551 951",
@@ -309,7 +309,7 @@
     {
       "type": "Feature",
       "properties": {
-        "restaurant": "pizza",
+        "type": "pizza",
         "name": "Fabryka Smakow",
         "adres": "Partyzantów 17",
         "telefon": "25 632 00 00",
@@ -327,7 +327,7 @@
     {
       "type": "Feature",
       "properties": {
-        "restaurant": "pizza",
+        "type": "pizza",
         "name": "Kampa",
         "adres": "Starowiejska 174",
         "telefon": "25 633 70 80",
@@ -345,7 +345,7 @@
     {
       "type": "Feature",
       "properties": {
-        "restaurant": "pizza",
+        "type": "pizza",
         "name": "Piwnica za Rogiem",
         "adres": "Sokołowska 23",
         "telefon": "889 010 020",
@@ -363,7 +363,7 @@
     {
       "type": "Feature",
       "properties": {
-        "restaurant": "sushi",
+        "type": "sushi",
         "name": "Made in Japan",
         "adres": "Czerwonego Krzyża 36",
         "telefon": "609 990 999",
@@ -381,7 +381,7 @@
     {
       "type": "Feature",
       "properties": {
-        "restaurant": "sushi",
+        "type": "sushi",
         "name": "Nanatsu",
         "adres": "Piłsudskiego 74",
         "telefon": "257410677",
@@ -399,7 +399,7 @@
     {
       "type": "Feature",
       "properties": {
-        "restaurant": "sushi",
+        "type": "sushi",
         "name": "Nanatsu",
         "adres": "Formińskiego 1",
         "telefon": "25 75 15 223",
@@ -417,7 +417,7 @@
     {
       "type": "Feature",
       "properties": {
-        "restaurant": "bar",
+        "type": "bar",
         "name": "Pepe Verde",
         "adres": "Wojskowa 3",
         "telefon": "25 633 07 00",
@@ -435,7 +435,7 @@
     {
       "type": "Feature",
       "properties": {
-        "restaurant": "bar",
+        "type": "bar",
         "name": "Piwiarnia Miejska",
         "adres": "Wojskowa 1",
         "telefon": "666 660 088",
@@ -453,7 +453,7 @@
     {
       "type": "Feature",
       "properties": {
-        "restaurant": "bar",
+        "type": "bar",
         "name": "Pracownia Rannych Pantofli",
         "adres": "3 Maja 38",
         "telefon": "502 799 294",
@@ -471,7 +471,7 @@
     {
       "type": "Feature",
       "properties": {
-        "restaurant": "restauracja",
+        "type": "restauracja",
         "name": "Wolczykij",
         "adres": "Biskupa Świrskiego 43B",
         "telefon": "792 596 254",
@@ -489,7 +489,7 @@
     {
       "type": "Feature",
       "properties": {
-        "restaurant": "restauracja",
+        "type": "restauracja",
         "name": "Wolczykij",
         "adres": "Biskupa Świrskiego 43B",
         "telefon": "792 596 254",
@@ -507,7 +507,7 @@
     {
       "type": "Feature",
       "properties": {
-        "restaurant": "restauracja",
+        "type": "restauracja",
         "name": "Brofaktura",
         "adres": "Armii Krajowej 5",
         "telefon": "25 633 63 33",
@@ -525,7 +525,7 @@
     {
       "type": "Feature",
       "properties": {
-        "restaurant": "restauracja",
+        "type": "restauracja",
         "name": "Meat and Fit",
         "adres": "Piłsudskiego 11",
         "telefon": "517 212 288",
@@ -543,7 +543,7 @@
     {
       "type": "Feature",
       "properties": {
-        "restaurant": "restauracja",
+        "type": "restauracja",
         "name": "Kochanówka",
         "adres": "Kochanowskiego 9",
         "telefon": "505 172 964",
@@ -561,7 +561,7 @@
     {
       "type": "Feature",
       "properties": {
-        "restaurant": "restauracja",
+        "type": "restauracja",
         "name": "Zaścianek Polski",
         "adres": "Asłanowicza 17",
         "telefon": "25 631-02-29",
@@ -579,7 +579,7 @@
     {
       "type": "Feature",
       "properties": {
-        "restaurant": "restauracja",
+        "type": "restauracja",
         "name": "Bollywood Hollywood",
         "adres": "Wiszniewskiego 4",
         "telefon": "25 6 332 332",
@@ -597,7 +597,7 @@
     {
       "type": "Feature",
       "properties": {
-        "restaurant": "restauracja",
+        "type": "restauracja",
         "name": "Omega",
         "adres": "Starowiejska 24",
         "telefon": "533 016 016",
@@ -615,7 +615,7 @@
     {
       "type": "Feature",
       "properties": {
-        "restaurant": "restauracja",
+        "type": "restauracja",
         "name": "Bufet Gastronomiczny PKP",
         "adres": "pl. Zdanowskiego 1",
         "telefon": "25 632 66 42",
@@ -633,7 +633,7 @@
     {
       "type": "Feature",
       "properties": {
-        "restaurant": "restauracja",
+        "type": "restauracja",
         "name": "Patio",
         "adres": "Plac Tysiąlecia 21",
         "telefon": "728 949 649",
@@ -651,7 +651,7 @@
     {
       "type": "Feature",
       "properties": {
-        "restaurant": "restauracja",
+        "type": "restauracja",
         "name": "Kamienica",
         "adres": "Wojska Polskiego 60",
         "telefon": "666 455 688",
@@ -1105,7 +1105,7 @@
     {
       "type": "Feature",
       "properties": {
-        "type": "hostel",
+        "type": "hotel",
         "name": "Noclegi dla Firm",
         "adres": "Siedlecka 31",
         "telefon": "509 339 024",
@@ -1123,7 +1123,7 @@
     {
       "type": "Feature",
       "properties": {
-        "type": "hostel",
+        "type": "hotel",
         "name": "Hotelik",
         "adres": "Łukowska 7A",
         "telefon": "25 644 87 97",
@@ -1141,7 +1141,7 @@
     {
       "type": "Feature",
       "properties": {
-        "type": "hostel",
+        "type": "hotel",
         "name": "Noclegi U Krysi ",
         "adres": "Jaśminowa 42",
         "telefon": "604 780 004",

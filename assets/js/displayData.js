@@ -52,20 +52,9 @@ const getButtons = (page, resultNumber, itemPerPage) => {
 };
 
 
-//get the height of actual box
-
-//get the height of parent element
 
 
-
-
-let heightOfSmallbox = 70;
-const searchBar = document.querySelector(".places-info__search-bar").getBoundingClientRect().height;
-// console.log(searchBar);
-
-
-
-
+const searchBarHeight = document.querySelector(".places-info__search-bar").getBoundingClientRect().height;
 
 const countDisplayItems = (height, boxHeight, count = 0) => {
 	if(boxHeight < 0) {
@@ -75,7 +64,7 @@ const countDisplayItems = (height, boxHeight, count = 0) => {
 	};
 };
 
-var displayCanFitBox = countDisplayItems(120, searchBar, 0);
+const displayCanFitBox = countDisplayItems(120, searchBarHeight, 0);
 
 
 
@@ -99,8 +88,8 @@ export const paginationData = (data, page = 1, itemPerPage = (displayCanFitBox-1
 	getButtons(page, data.length, itemPerPage);
 }
 
-elementsDOM.listOfItems.forEach(listItem => {
-	listItem.addEventListener("click", function(e){
+// elementsDOM.listOfItems.forEach(listItem => {
+// 	listItem.addEventListener("click", function(e){
 
-	});
-});
+// 	});
+// });

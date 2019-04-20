@@ -69,7 +69,7 @@ fetch('/kebabs.json', {
 			pointToLayer: function (geoJsonPoint, latlng) {
 				//Funckja, która nadaje odpowiednie ikony 
 
-				const restaurantProperties = geoJsonPoint.properties.restaurant;
+				const restaurantProperties = geoJsonPoint.properties.type;
 				const typeProperties = geoJsonPoint.properties.type;
 
 				if (restaurantProperties === 'kebab') {
@@ -154,7 +154,7 @@ fetch('/kebabs.json', {
 					const adres = layer.feature.properties.adres;
 					const img = '<img src="' + layer.feature.properties.img + '" />';
 
-					if (layer.feature.properties.restaurant || layer.feature.properties.type === 'hotel' || layer.feature.properties.type === 'hostel') {
+					if (layer.feature.properties.type || layer.feature.properties.type === 'hotel' || layer.feature.properties.type === 'hostel') {
 						overlay.innerHTML = name + "<br><br>" + '<img src=\'assets/mapicons/phone-receiver.png\'>' + "  " + telephone + "<br><br>" + '<img src=\'assets/mapicons/location.png\'>' + "  " + adres + "<br>";
 						imageBox.innerHTML = img;
 					} else if (layer.feature.properties.type === 'kosciol' || layer.feature.properties.type === 'pomnik') {
@@ -168,7 +168,7 @@ fetch('/kebabs.json', {
 				//Poszczegolne funkcje, które pozwalają na włączanie oraz wyłączanie widoku markerów
 
 				function toggleKebab() {
-					const kebab = feature.properties.restaurant === 'kebab';
+					const kebab = feature.properties.type === 'kebab';
 					const kebabImg = document.querySelectorAll('img[src="assets/mapicons/kebab.png"]');
 					if (kebab) {
 						kebabImg.forEach(function (keba) {
@@ -178,7 +178,7 @@ fetch('/kebabs.json', {
 				};
 
 				function togglePizza() {
-					const pizza = feature.properties.restaurant === 'pizza';
+					const pizza = feature.properties.type === 'pizza';
 					const pizzaImg = document.querySelectorAll('img[src="assets/mapicons/pizza.png"]');
 					if (pizza) {
 						pizzaImg.forEach(function (pizzeria) {
@@ -188,7 +188,7 @@ fetch('/kebabs.json', {
 				};
 
 				function toggleSushi() {
-					const sushi = feature.properties.restaurant === 'sushi';
+					const sushi = feature.properties.type === 'sushi';
 					const sushiImg = document.querySelectorAll('img[src="assets/mapicons/sushi.png"]');
 					if (sushi) {
 						sushiImg.forEach(function (sushipart) {
@@ -198,7 +198,7 @@ fetch('/kebabs.json', {
 				};
 
 				function toggleBar() {
-					const bar = feature.properties.restaurant === 'bar';
+					const bar = feature.properties.type === 'bar';
 					const barImg = document.querySelectorAll('img[src="assets/mapicons/bar.png"]');
 					if (bar) {
 						barImg.forEach(function (ba) {
@@ -208,7 +208,7 @@ fetch('/kebabs.json', {
 				};
 
 				function toggleRestaurant() {
-					const restaurant = feature.properties.restaurant === 'restauracja';
+					const restaurant = feature.properties.type === 'restauracja';
 					const restaurantImg = document.querySelectorAll('img[src="assets/mapicons/restaurant.png"]');
 					if (restaurant) {
 						restaurantImg.forEach(function (rest) {
