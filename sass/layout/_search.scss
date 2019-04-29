@@ -63,12 +63,6 @@
 }
 
 
-
-
-
-
-
-
 .search-map { 
     
     height: 100%;
@@ -86,4 +80,35 @@
     z-index: 999;
     right: 0;
     bottom: 0;
+}
+
+
+.category {
+   
+    &__list__item {
+        cursor: pointer;
+        justify-content: center;
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &:hover .fas {
+            top: 5px;          
+        }
+    }
+}
+
+.widget {
+
+  
+
+    &__image-box {
+     
+    }
+
+    &__image {
+        object-fit: cover;
+       
+    }
 }

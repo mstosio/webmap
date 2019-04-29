@@ -15,7 +15,8 @@ export const displayInfo = (data, clickedId) => {
             elementsDOM.widget.innerHTML = "";
 
             const elementPlacement = ` 
-				<img src="${item.properties.img}" />
+                <div class="widget__image-box"><img class="widget__image" src="${item.properties.img}" /></div>
+                <div class="widget__name">${item.properties.name}</div>
             `
                
 			elementsDOM.widget.insertAdjacentHTML('beforeend', elementPlacement );

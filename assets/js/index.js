@@ -8,7 +8,7 @@ import { changeCategory } from './changeCategory';
 
 
 //Global state
-const state = {};
+export const state = {};
 
 const controlData = async () => {
     addMapView();
@@ -20,18 +20,18 @@ const controlData = async () => {
 };
 
 //przepiac do elementsDOM
-
 const categoryItems = document.querySelectorAll(".category__list__item");
 
 
 //rozkiminic jak przezkazac this w inny sposob HINT:bind
-
 categoryItems.forEach(categoryItem => {
 	categoryItem.addEventListener("click", function(e){
         let that = this;
         changeCategory(state.search.result, that);
 	});
 });
+
+
 
 elementsDOM.buttonBox.addEventListener('click', function(e){
     const button = e.target.closest('button');
@@ -43,7 +43,6 @@ elementsDOM.buttonBox.addEventListener('click', function(e){
 });
 
 
-//EVENT DELEGATION HAPPENS
 elementsDOM.searchBox.addEventListener('click', function(e){
   
     if(!e.target.closest('.places-info__element')) return;

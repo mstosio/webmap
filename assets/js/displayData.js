@@ -56,7 +56,7 @@ const getButtons = (page, resultNumber, itemPerPage) => {
 
 const searchBarHeight = document.querySelector(".places-info__search-bar").getBoundingClientRect().height;
 
-const countDisplayItems = (height, boxHeight, count = 0) => {
+export const countDisplayItems = (height, boxHeight, count = 0) => {
 	if(boxHeight < 0) {
 		return count;
 	} else {
@@ -65,8 +65,6 @@ const countDisplayItems = (height, boxHeight, count = 0) => {
 };
 
 const displayCanFitBox = countDisplayItems(120, searchBarHeight, 0);
-
-
 
 
 
@@ -88,8 +86,3 @@ export const paginationData = (data, page = 1, itemPerPage = (displayCanFitBox-1
 	getButtons(page, data.length, itemPerPage);
 }
 
-// elementsDOM.listOfItems.forEach(listItem => {
-// 	listItem.addEventListener("click", function(e){
-
-// 	});
-// });

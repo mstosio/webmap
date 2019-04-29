@@ -5,5 +5,6 @@ export const elementsDOM = {
     searchButton: document.querySelector(".search-button"),
     buttonBox: document.querySelector(".places-info__button-box"),
     elementsBox: document.querySelector(".places-info__elements"),
-    widget: document.querySelector(".widget")
+    widget: document.querySelector(".widget"),
+    listOfItems: document.querySelectorAll(".category__list__item"),
 }
