@@ -1,4 +1,4 @@
-export const mymap = L.map('search-map').setView([52.167930660117555, 22.271411418914795], 15);
+export const mymap = L.map('mymap').setView([52.167930660117555, 22.271411418914795], 15);
 
 
 export const addMapView = () => {

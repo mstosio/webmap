@@ -1,51 +1,25 @@
-//Funkcja, sprawia, że wszystkie checkboxy są zaznaczone podczas załadowania strony
-alert("ayyesds");
-window.onload = onPageLoad();
+import { gooportalIcon } from './markers';
+import { addMapView, mymap } from './mapOverlay';
+import { onPageLoad, displayOverlay, displayOverlayLayer } from './helpers';
 
-function onPageLoad() {
-	const kebs = document.getElementsByClassName("overlay__marker-checkbox");
-	const checkboxes = document.querySelectorAll("checkbox");
-	for (let i = 0; i < kebs.length; i++) {
-		kebs[i].checked = true;
-	}
+
+const geoportalContoller = () => {
+	addMapView();
+	onPageLoad();
+	displayOverlay();
+	displayOverlayLayer()
 }
-// MAP INTERACTIVITY
-const mymap = L.map('mymap').setView([52.167930660117555, 22.271411418914795], 15);
 
-const firstOverlay = L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
-	maxZoom: 18,
-	attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
-		'<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-		'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-	id: 'mapbox.streets'
-});
+geoportalContoller();
 
 
-const secondOverlay = L.tileLayer('http://{s}.tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png', {
-	maxZoom: 18,
-	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-});
 
-const thirdOverlay = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-	maxZoom: 19,
-	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-});
 
-const fourthOverlay = L.tileLayer('https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', {
-	maxZoom: 18,
-	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-});
+//Funkcja, sprawia, że wszystkie checkboxy są zaznaczone podczas załadowania strony
 
-firstOverlay.addTo(mymap);
 
-const baseLayers = {
-	"Domyślne": firstOverlay,
-	"Black and White": secondOverlay,
-	"Open Street Map": thirdOverlay,
-	"Open Street Map 2": fourthOverlay
-};
 
-L.control.layers(baseLayers).addTo(mymap);
+
 
 //import GeoJSON
 
@@ -278,82 +252,12 @@ fetch('/kebabs.json', {
 	})
 	.catch(error => console.log(error.message));
 
-// let kebabGeoJSON = false;
-// fetch('/bike.json', {
-// 	method: 'GET'
-// })
-// 	.then(response => response.json())
-// 	.then(json => {
-
-
-
-// 		let geojson = L.geoJSON(json, {
-// 			// if(feature.properties.name === 'trasa zalew'){
-
-// 			// }
-// 			style: function (feature) {
-// 				return {
-// 					stroke: true,
-// 					color: "red",
-// 					weight: 3
-// 				}
-// 			},
-// 			onEachFeature: function (feature, layer) {
-// 				if (feature.properties.name = "trasa zalew") {
-// 					layer.setStyle({
-// 						'color': feature.properties.color,
-// 					});
-// 				}
-
-// 				if (feature.geometry.type === 'LineString') {
-// 					layer.bindPopup(
-// 						feature.properties.name + "<br>Długość: " +
-// 						feature.properties.mile
-// 					);
-// 				};
-
-// 				const bikeCheckbox = document.getElementById('biketrackscheckbox');
-
-// 				bikeCheckbox.addEventListener('click', function (layer) {
-// 					const bikeCheckbox = document.getElementById('biketrackscheckbox');
-
-// 					geojson.eachLayer(function (layer) {
-// 						if (mymap.hasLayer(layer)) {
-// 							mymap.removeLayer(layer);
-// 						} else {
-// 							layer.addTo(mymap);
-// 						}
-// 					})
-
-
-
-// 				});
-
-
-// 			},
-
-
-// 		}).addTo(mymap);
-// 	})
-// 	.catch(error => console.log(error.message));
 
 
 const searchInput = document.getElementById('slide-in__search-input');
 
-
-
-
-
 //Klasa ikony
-const gooportalIcon = L.Icon.extend({
-	options: {
-		iconSize: [32, 37],
-		shadowSize: [90, 64],
-		iconAnchor: [15, 50],
-		shadowAnchor: [4, 62],
-		popupAnchor: [-3, -76]
-	}
-});
+
 
 // poszczegolny ikony
 const kebabIcon = new gooportalIcon({ iconUrl: 'assets/mapicons/kebab.png' });
@@ -375,6 +279,8 @@ const hostelIcon = new gooportalIcon({ iconUrl: 'assets/mapicons/hostel.png' });
 // 	$('#current_center').html(mymap.getCenter().lat+','+mymap.getCenter().lng);
 // } 
 
+
+
 mymap.on('moveend', function (e) {
 	const inputbox = document.getElementById("current_center");
 	const lat = mymap.getCenter().lat.toFixed(7);
@@ -383,29 +289,3 @@ mymap.on('moveend', function (e) {
 })
 
 
-// overlay toggle
-
-const toggleOverlay = document.getElementById('slide-in__toggle-button');
-
-toggleOverlay.addEventListener('click', displayOverlay);
-
-const overlay = document.getElementById('slide-in__slider');
-const arrowImage = document.getElementById('slide-in__toggle--arrow');
-
-function displayOverlay() {
-	overlay.classList.toggle("visible");
-	changeArrowImage();
-}
-
-function displayOverlayLayer() {
-	overlay.classList.add("visible");
-	changeArrowImage();
-}
-
-function changeArrowImage() {
-	if (overlay.classList.contains("visible")) {
-		arrowImage.src = "assets/mapicons/left-arrow.png";
-	} else {
-		arrowImage.src = "assets/mapicons/right-arrow.png";
-	}
-};

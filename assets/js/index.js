@@ -11,7 +11,7 @@ import { changeCategory } from './changeCategory';
 export const state = {};
 
 const controlData = async () => {
-    addMapView();
+        addMapView();
         state.search = new Data();
         await state.search.getData();
         let data = state.search.result;

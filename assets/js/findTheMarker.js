@@ -1,8 +1,15 @@
+
 import { mymap } from './mapOverlay';
+import { gooportalIcon } from './markers';
+
 
 let marker = null;
 let lastClicked;
 //add click event on each item and flies to marker on the map
+
+
+
+
 export const findTheMarker = (data) => {
     const listOfItems = document.querySelectorAll(".places-info__element");
    
@@ -34,8 +41,16 @@ export const findTheMarker = (data) => {
                                 if (marker !== null) {
                                     mymap.removeLayer(marker);
                             }
-                            marker = L.marker([dataLng, dataLat]).addTo(mymap);
+                            marker = L.marker([dataLng, dataLat],
+                                
+                                 
+                                
+                                ).addTo(mymap);
+
+                               
+                                marker.bounce();
                             mymap.flyTo([dataLng, dataLat]);
+                            
                             }
                         });
                     });

@@ -64,7 +64,7 @@ export const countDisplayItems = (height, boxHeight, count = 0) => {
 	};
 };
 
-const displayCanFitBox = countDisplayItems(120, searchBarHeight, 0);
+export const displayCanFitBox = countDisplayItems(120, searchBarHeight, 0);
 
 
 
@@ -83,6 +83,9 @@ export const paginationData = (data, page = 1, itemPerPage = (displayCanFitBox-1
 
 	sortedData.slice(start, end).forEach(displayData);
 
-	getButtons(page, data.length, itemPerPage);
+	if(sortedData.length > displayCanFitBox){
+		getButtons(page, data.length, itemPerPage);
+	}
+	
 }
 
