@@ -1,13 +1,15 @@
 
-import { paginationData, displayCanFitBox, clearBox  } from './displayData';
+import { paginationData, displayCanFitBox, clearBox, countDisplayItems  } from './displayData';
 import { findTheMarker } from './findTheMarker';
 import { state } from './index';
+import { elementsDOM, Loader, clearLoader } from './elements';
 import Data from './data';
 
 let lastclicked;
 
 export let changeCategory = async (data, that) => {
-    
+    console.log("getLoader");
+    clearBox();
     state.search = new Data();
     await state.search.getData();
 
@@ -19,7 +21,8 @@ export let changeCategory = async (data, that) => {
         }
     }); 
 
-    clearBox();
+
+    Loader(elementsDOM.searchBox);
 
     if(lastclicked && lastclicked.dataset.type != "all"){
         lastclicked.querySelector(".fas").classList.remove("fa-pulse");
@@ -30,16 +33,15 @@ export let changeCategory = async (data, that) => {
         that.querySelector(".fas").classList.add("fa-pulse");
     }  
 
-    
-    
-       
-  
-
-    
     lastclicked = that;
-    paginationData(state.search.result, displayCanFitBox);
-    findTheMarker(state.search.result);
-
+    
+    //set timeout for test if loader is working
+    setTimeout(function(){
+        paginationData(state.search.result);
+        findTheMarker(state.search.result);
+    }, 1000);
+    clearLoader();
+  
   
 };
 
