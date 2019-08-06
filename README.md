@@ -29,6 +29,12 @@ Before running app, install needed dependencies.
 npm install 
 ```
 
+For running webpack devserver on your local machine:
+
+```
+npm start
+```
+
 For auto compiling SASS use:
 
 ```
@@ -47,10 +53,6 @@ For bundling your files in production mode (the files will be compressed):
 npm run build
 ```
 
-For running webpack devserver on your local machine:
 
-```
-npm start
-```
 
 Webpack config includes whole Babel config, so you are able to use ES6+ features.
