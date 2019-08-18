@@ -40,7 +40,8 @@ module.exports = {
                 './*.html',
                 './assets/css/*.css',
                 './assets/js/*.js',
-                './bundle/*.js'
+                './bundle/*.js',
+                './bundle/*.css',
             ],
             server: { baseDir: ['./'] }
         })

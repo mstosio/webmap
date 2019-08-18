@@ -1,20 +1,23 @@
 import { elementsDOM } from './elements';
 
+
+
 export const displayData = item => {
-			// data.forEach(item => {
 				const element = ` 
 				<div class="places-info__element" data-id="item-${item.properties.id}">
-					<div class="places-info__box">
+					<div class="places-info__box places-info__box-${item.properties.type}">
 							<div class="places-info__title" >
 								<h4 class="places-info__name">${item.properties.name}</h4>
 								<p>${item.properties.type}</p>
-							</div>
-						
+					
+							</div>	
+							<div class="places-info__line"></div>	
+							
 					</div>
+				
 				</div>`
                
 				elementsDOM.searchBox.insertAdjacentHTML('beforeend', element );
-			// });
 };
 
 export const clearBox = () => {

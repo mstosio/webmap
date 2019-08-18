@@ -3,64 +3,121 @@
     height: 80vh;
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(6, 1fr);
-}
 
-.places-info__search-bar {
-    grid-column: 1 / 3;
-    grid-row: 1 / 7;
-    display: flex;
-    flex-direction: column;
-    font-size: 2rem;
-    overflow: hidden;
-}
+    &__search-bar {
+        grid-column: 1 / 3;
+        grid-row: 1 / 7;
+        display: flex;
+        flex-direction: column;
+        font-size: 2rem;
+        overflow: hidden;
+    }
 
-.places-info__button-box {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-column: 1 / 3;
-    grid-row: 7;
-}
+    &__button-box {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column: 1 / 3;
+        grid-row: 7;
+    }
 
-.button--prev {
-    grid-column: 1/3;
-}
 
-.button--next {
-    grid-column: 3/5;
-}
+    &__element {
+        margin:15px;
+     
+    }
 
-.places-info__element {
-    margin:15px;
- 
-}
+    &__line {
+        width: 2px;
+        height: 100%;
+    }
 
-.places-info__box {
-    color: #99a1ab;
-    padding: 10px;
-    height: 80px;
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.05), 0 1px 5px 0 rgba(0,0,0,0.04);
-    // background-color: red;
-    font-size: $small-font;
-    display: flex;
-    justify-content: space-between;
 
-    &--active {
-        box-shadow: 0 10px 10px 0 rgba(0,0,0,0.05), 0 10px 10px 0 rgba(0,0,0,0.04);
+    &__box {
+        color: #99a1ab;
+      
+        height: 80px;
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,0.05), 0 1px 5px 0 rgba(0,0,0,0.04);
+        // background-color: red;
+        font-size: $small-font;
+        display: flex;
+        justify-content: space-between;
+    
+        &--active {
+            box-shadow: 0 10px 10px 0 rgba(0,0,0,0.05), 0 10px 10px 0 rgba(0,0,0,0.04);
+        }
+
+        &-restauracja {
+            .places-info__line {
+                background-color: $restaurant-color;  
+            }
+        }
+
+        &-kebab {
+            .places-info__line {
+                background-color: $church-color;  
+            }
+        }
+
+        &-sushi {
+            .places-info__line {
+                background-color: $sushi-color;  
+            }
+        }
+
+        &-pizza {
+            .places-info__line {
+                background-color: $pizza-color;  
+            }
+        }
+
+        &-kosciol {
+            .places-info__line {
+                background-color: $church-color;  
+            }
+        }
+
+        &-hotel {
+            .places-info__line {
+                background-color: $hotel-color;  
+            }
+        }
+
+        &-pomnik {
+            .places-info__line {
+                background-color: $monument-color;  
+            }
+        }
+
+        &-bar {
+            .places-info__line {
+                background-color: $bar-color;  
+            }
+        }
+    }
+
+    &__title {
+        padding: 10px;
+        max-width: 95%;
+    }
+    
+
+    &__map {
+        position: relative;
+        grid-column: 3/9;
+        grid-row: 1/8;
+    }
+
+    &__name {
+        color: #5a6371;;
+        font-size: $medium-font;
+    }
+    
+
+    &__line {
+        
     }
 }
 
-
-.places-info__name {
-    color: #5a6371;;
-    font-size: $medium-font;
-}
-
-
-.places-info__map {
-    position: relative;
-    grid-column: 3/9;
-    grid-row: 1/8;
-}
 
 
 .search-map { 
@@ -71,17 +128,6 @@
     grid-template-rows: repeat(6, 1fr);
     // height: 90vh;
 }
-
-.widget {
-    background-color: white;
-    position: absolute;
-    height: 15rem;
-    width: 26rem;
-    z-index: 999;
-    right: 0;
-    bottom: 0;
-}
-
 
 .category {
    
@@ -96,19 +142,5 @@
         &:hover .fas {
             top: 5px;          
         }
-    }
-}
-
-.widget {
-
-  
-
-    &__image-box {
-     
-    }
-
-    &__image {
-        object-fit: cover;
-       
     }
 }

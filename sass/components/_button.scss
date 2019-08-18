@@ -34,3 +34,15 @@ button, .button:link, .button:visited {
    }
   }
  
+
+  
+.button--prev {
+  grid-column: 1/3;
+}
+
+.button--next {
+  grid-column: 3/5;
+}
+
+
+
