@@ -14,8 +14,7 @@ import axios from 'axios';
 
 
 let kebabGeoJSON = false;
-
-fetch('webmap/kebabs.json', {
+fetch('/webmap/kebabs.json', {
 	method: 'GET'
 })
 	.then(response => response.json())
