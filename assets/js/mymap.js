@@ -24,7 +24,7 @@ geoportalContoller();
 //import GeoJSON
 
 let kebabGeoJSON = false;
-fetch('/kebabs.json', {
+fetch('/webmap/kebabs.json', {
 	method: 'GET'
 })
 	.then(response => response.json())
