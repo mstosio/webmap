@@ -1,30 +1,21 @@
-import { gooportalIcon } from './markers';
+import {  kebabIcon, pizzaIcon, sushiIcon, barIcon, restaurantIcon, churchIcon, monumentIcon, hotelIcon,  hostelIcon } from './markers';
 import { addMapView, mymap } from './mapOverlay';
 import { onPageLoad, displayOverlay, displayOverlayLayer } from './helpers';
+import axios from 'axios';
 
 
-const geoportalContoller = () => {
+
+(function geoportalContoller(){
 	addMapView();
 	onPageLoad();
 	displayOverlay();
 	displayOverlayLayer()
-}
+})();
 
-geoportalContoller();
-
-
-
-
-//Funkcja, sprawia, że wszystkie checkboxy są zaznaczone podczas załadowania strony
-
-
-
-
-
-//import GeoJSON
 
 let kebabGeoJSON = false;
-fetch('/kebabs.json', {
+
+fetch('webmap/kebabs.json', {
 	method: 'GET'
 })
 	.then(response => response.json())
@@ -32,7 +23,6 @@ fetch('/kebabs.json', {
 		
 		const data = json.features;
 		
-
 		let geojson = L.geoJSON(json, {
 			style: function (feature) {
 				return {
@@ -89,7 +79,6 @@ fetch('/kebabs.json', {
 			onEachFeature: function (feature, layer) {
 
 
-
 				// toggleIcons
 				const checkbox = document.querySelectorAll(".overlay__marker-checkbox");
 
@@ -102,7 +91,6 @@ fetch('/kebabs.json', {
 					});
 				});
 
-
 				//Popup
 				if (feature.geometry.type === 'Point') {
 					layer.bindPopup(
@@ -114,7 +102,6 @@ fetch('/kebabs.json', {
 
 
 				//Po kliknieciu funkcja dodaje informacje o obiekcie i wyswietla je w zaawansowanym menu
-
 				layer.addEventListener('click', function () {
 					const overlay = document.getElementById("slide-in__box");
 					const imageBox = document.getElementById("slide-in__image-box");
@@ -134,9 +121,9 @@ fetch('/kebabs.json', {
 					displayOverlayLayer();
 				});
 
+				const searchInput = document.getElementById('slide-in__search-input');
 
 				//SEARCH
-
 				searchInput.addEventListener('keyup', function (e) {
 					const userInput = e.target.value;
 					geojson.eachLayer(function (layer) {
@@ -147,44 +134,13 @@ fetch('/kebabs.json', {
 						}
 					})
 				});
-
-
-
 			},
 
 		}).addTo(mymap);
 	})
 	.catch(error => console.log(error.message));
 
-
-
-const searchInput = document.getElementById('slide-in__search-input');
-
 //Klasa ikony
-
-
-// poszczegolny ikony
-const kebabIcon = new gooportalIcon({ iconUrl: 'assets/mapicons/kebab.png' });
-const pizzaIcon = new gooportalIcon({ iconUrl: 'assets/mapicons/pizza.png' });
-const sushiIcon = new gooportalIcon({ iconUrl: 'assets/mapicons/sushi.png' });
-const barIcon = new gooportalIcon({ iconUrl: 'assets/mapicons/bar.png' });
-const restaurantIcon = new gooportalIcon({ iconUrl: 'assets/mapicons/restaurant.png' });
-const churchIcon = new gooportalIcon({ iconUrl: 'assets/mapicons/kosciol.png' });
-const monumentIcon = new gooportalIcon({ iconUrl: 'assets/mapicons/monument.png' });
-const hotelIcon = new gooportalIcon({ iconUrl: 'assets/mapicons/hotel.png' });
-const hostelIcon = new gooportalIcon({ iconUrl: 'assets/mapicons/hostel.png' });
-
-
-
-
-//coordinates 
-
-// mymap.on('moveend'), function(e){
-// 	$('#current_center').html(mymap.getCenter().lat+','+mymap.getCenter().lng);
-// } 
-
-
-
 mymap.on('moveend', function (e) {
 	const inputbox = document.getElementById("current_center");
 	const lat = mymap.getCenter().lat.toFixed(7);

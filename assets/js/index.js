@@ -7,6 +7,8 @@ import { displayInfo } from './displayInfo';
 import { changeCategory } from './changeCategory';
 
 
+
+
 //Global state
 export const state = {};
 
@@ -18,6 +20,7 @@ const controlData = async () => {
         paginationData(data);
         findTheMarker(data);
 };
+
 
 //przepiac do elementsDOM
 const categoryItems = document.querySelectorAll(".category__list-item");
