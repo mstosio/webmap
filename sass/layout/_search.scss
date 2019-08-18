@@ -127,11 +127,12 @@
 
 .category {
    
-    &__list__item {
+    &__list-item {
         cursor: pointer;
         justify-content: center;
         padding: 25px;
         display: flex;
+        font-size: 13px;
         flex-direction: column;
         align-items: center;
 
@@ -139,4 +140,47 @@
             top: 5px;          
         }
     }
+
+    &__icon {
+        color: white;
+    }
+
+    &__icon-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      
+        border-radius: 50%;
+        width: 30px;
+        height:30px;
+
+        &--restauracje {
+            background-color: $restaurant-color;
+        }
+
+        &--pizza {
+            background-color: $pizza-color;
+        }
+
+        &--sushi {
+            background-color: $sushi-color;
+        }
+
+        &--kebab {
+            background-color: $kebab-color;
+        }
+
+        &--koscioly {
+            background-color: $church-color;
+        }
+      
+        &--hotele {
+            background-color: $hotel-color;
+        }
+        &--pomnik {
+            background-color: $monument-color;
+        }
+    }
+
+    
 }

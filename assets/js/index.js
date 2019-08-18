@@ -20,7 +20,7 @@ const controlData = async () => {
 };
 
 //przepiac do elementsDOM
-const categoryItems = document.querySelectorAll(".category__list__item");
+const categoryItems = document.querySelectorAll(".category__list-item");
 
 
 //rozkiminic jak przezkazac this w inny sposob HINT:bind

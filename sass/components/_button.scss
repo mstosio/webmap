@@ -2,18 +2,19 @@
 .button {
     padding: 15px 30px;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 14px;
     display: block;
     margin: 20px auto;
   }
 
 
 button, .button:link, .button:visited {
-    background-color: #5b657c;
+    background-color: $primary;
     border: none;
     border-radius: 3px;
     box-shadow: 0 -3px 0 rgba(0,0,0,0.15) inset;
     color: #fff;
+
    letter-spacing: .1em;
     cursor: pointer;
     position: relative;
@@ -46,3 +47,18 @@ button, .button:link, .button:visited {
 
 
 
+.category__button {
+
+    background-color: $primary;
+    color: #fff;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    text-transform: none;
+    font-weight: 600;
+    line-height: 42px;
+    font-size: 14px;
+    height: 42px;
+    padding: 0 22px;
+
+}

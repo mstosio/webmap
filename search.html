@@ -4,88 +4,113 @@
 <head>
     <title>Geoportal Siedlce</title>
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
+        integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
         crossorigin="" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.0/dist/MarkerCluster.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.0/dist/MarkerCluster.Default.css">
-    <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
+    <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"
+        integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
         crossorigin=""></script>
-        <script type="text/javascript" src="assets/plugins/leaflet.smoothmarkerbouncing.js"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script type="text/javascript" src="assets/plugins/leaflet.smoothmarkerbouncing.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
 
-        
+
 
 
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
- 
+
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <meta name="viewport" content="width=device-width">
 
 </head>
+
 <body>
-    
 
 
-<header id="header">
-    <div class="hamburger">
-        <img class="hamburger__icon" src="icons/menu_icon.png" alt="">
-    </div>
 
-    <nav class="navbar" id="navbar">
-        <div class="navbar__logo">
-            <img class="navbar__logo-img" src="assets/mapicons/main-logo.svg" alt="logo">
-
-            <div class="navbar__logo-box">
-                <div class="navbar__logo-name">SIEDLCE</div>
-                <div class="navbar__logo-tagline">Geoportal</div>
-            </div>
+    <header id="header">
+        <div class="hamburger">
+            <img class="hamburger__icon" src="icons/menu_icon.png" alt="">
         </div>
-        <div class="navbar__menu">
-            <ul>
-                <li><a class="navbar__item" href="stronaglowna.html">Strona Główna</a></li>
-                <li><a class="navbar__item--active" href="index.html">Geoportal</a></li>
-                <li><a class="navbar__item" href="search.html">Search Bar</a></li>
+
+        <nav class="navbar" id="navbar">
+            <div class="navbar__logo">
+                <img class="navbar__logo-img" src="assets/mapicons/main-logo.svg" alt="logo">
+
+                <div class="navbar__logo-box">
+                    <div class="navbar__logo-name">SIEDLCE</div>
+                    <div class="navbar__logo-tagline">Geoportal</div>
+                </div>
+            </div>
+            <div class="navbar__menu">
+                <ul>
+                    <li><a class="navbar__item" href="stronaglowna.html">Strona Główna</a></li>
+                    <li><a class="navbar__item--active" href="index.html">Geoportal</a></li>
+                    <li><a class="navbar__item" href="search.html">Search Bar</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="category">
+            <ul class="category__list">
+                <li class="category__list-item" data-type="all"><button class="category__button">Wszystkie</button></li>
+                <li class="category__list-item" data-type="restauracja">
+                    <div class="category__icon-wrapper category__icon-wrapper--restauracje"><i class="category__icon fas fa-utensils"></i></div>
+                    <span>Restauracje</span>
+                </li>
+                <li class="category__list-item" data-type="pizza">
+                    <div class="category__icon-wrapper category__icon-wrapper--pizza"><i class="category__icon fas fa-pizza-slice"></i></div>
+                    <span>Pizza</span>
+                </li>
+                <li class="category__list-item" data-type="sushi">
+                    <div class="category__icon-wrapper category__icon-wrapper--sushi"><i class="category__icon fas fa-drumstick-bite"></i></div>
+                    <span>Sushi</span>
+                </li>
+                <li class="category__list-item" data-type="kebab">
+                    <div class="category__icon-wrapper category__icon-wrapper--kebab"><i class="category__icon fas fa-pepper-hot"></i></div>
+                    <span>Kebab</span>
+                </li>
+                <li class="category__list-item" data-type="kosciol">
+                    <div class="category__icon-wrapper category__icon-wrapper--koscioly"><i class="category__icon fas fa-cross"></i></div>
+                    <span>Koscioly</span>
+                </li>
+                <li class="category__list-item" data-type="hotel">
+                    <div class="category__icon-wrapper category__icon-wrapper--hotele"><i class="category__icon fas fa-hotel"></i></div>
+                    <span>Hotele</span>
+                </li>
+                <li class="category__list-item" data-type="pomnik">
+                    <div class="category__icon-wrapper category__icon-wrapper--pomnik"><i class="category__icon fas fa-monument"></i></div>
+                    <span>Pomnik</span>
+                </li>
             </ul>
         </div>
-    </nav>
-    <div class="category">
-        <ul class="category__list">
-                <li class="category__list__item " data-type="all">Wszystkie</li>
-            <li class="category__list__item " data-type="restauracja"><i class="fas fa-utensils"></i><span>Restauracje</span></li>
-            <li class="category__list__item" data-type="pizza"><i class="fas fa-pizza-slice"></i><span>Pizza</span></li>
-            <li class="category__list__item" data-type="sushi"><i class="fas fa-drumstick-bite"></i></i></i><span>Sushi</span></li>
-            <li class="category__list__item" data-type="kebab"><i class="fas fa-pepper-hot"></i><span>Kebab</span></li>
-            <li class="category__list__item" data-type="kosciol"><i class="fas fa-cross"></i><span>Koscioly</span></li>
-            <li class="category__list__item" data-type="hotel"><i class="fas fa-hotel"></i><span>Hotele</span></li>
-            <li class="category__list__item" data-type="pomnik"><i class="fas fa-monument"></i><span>Pomnik</span></li>
-        </ul>
-    </div>
-</header>
+    </header>
 
 
 
     <section class="places-info">
         <div class="places-info__search-bar">
-           
-            
+
+
         </div>
         <div class="places-info__button-box">
-          
+
         </div>
         <div class="places-info__map">
-                <!-- <div class="places-info__search-input">
+            <!-- <div class="places-info__search-input">
                     <input type="text" id="search-input" class="search-input">
                     <button type="submit" class="search-button">Szukaj</button>
                 </div> -->
             <div id="search-map" class="search-map"></div>
-            
-        <div class="widget">
-            
-        </div>
+
+            <div class="widget">
+
+            </div>
         </div>
 
-        
+
 
     </section>
 
@@ -94,17 +119,18 @@
 
 
 
-<footer class="geoportal-footer">
-    <p><span class="geoportal-footer--bluetag">Credits:</span> Michał Stosio</p>
-    <p><span class="geoportal-footer--bluetag">Contact information: </span>michaustosio@gmail.com</p>
-</footer>
+    <footer class="geoportal-footer">
+        <p><span class="geoportal-footer--bluetag">Credits:</span> Michał Stosio</p>
+        <p><span class="geoportal-footer--bluetag">Contact information: </span>michaustosio@gmail.com</p>
+    </footer>
 
-<!-- <script type="text/javascript" src="bundle/poly.js"></script> -->
-<!-- <script type="text/javascript" src="bundle/index.js"></script> -->
-<script type="text/javascript" src="bundle/index.js"></script>
+    <!-- <script type="text/javascript" src="bundle/poly.js"></script> -->
+    <!-- <script type="text/javascript" src="bundle/index.js"></script> -->
+    <script type="text/javascript" src="bundle/index.js"></script>
 
 
 
 
 </body>
+
 </html>

@@ -6,7 +6,7 @@ export const elementsDOM = {
     buttonBox: document.querySelector(".places-info__button-box"),
     elementsBox: document.querySelector(".places-info__elements"),
     widget: document.querySelector(".widget"),
-    listOfItems: document.querySelectorAll(".category__list__item"),
+    listOfItems: document.querySelectorAll(".category__list-item"),
 }
 
 export const baseElements = {

@@ -25,12 +25,12 @@ export let changeCategory = async (data, that) => {
     Loader(elementsDOM.searchBox);
 
     if(lastclicked && lastclicked.dataset.type != "all"){
-        lastclicked.querySelector(".fas").classList.remove("fa-pulse");
+        lastclicked.querySelector(".fas").classList.remove("category__list-item--active");
     }
     
     if(that.dataset.type != "all"){
         state.search.result = newdataset;
-        that.querySelector(".fas").classList.add("fa-pulse");
+        that.querySelector(".fas").classList.add("category__list-item--active");
     }  
 
     lastclicked = that;

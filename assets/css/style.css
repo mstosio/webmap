@@ -44,12 +44,12 @@ main {
 .button {
   padding: 15px 30px;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 14px;
   display: block;
   margin: 20px auto; }
 
 button, .button:link, .button:visited {
-  background-color: #5b657c;
+  background-color: #7cc576;
   border: none;
   border-radius: 3px;
   box-shadow: 0 -3px 0 rgba(0, 0, 0, 0.15) inset;
@@ -75,10 +75,23 @@ button, .button:link, .button:visited {
 .button--next {
   grid-column: 3/5; }
 
+.category__button {
+  background-color: #7cc576;
+  color: #fff;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  text-transform: none;
+  font-weight: 600;
+  line-height: 42px;
+  font-size: 14px;
+  height: 42px;
+  padding: 0 22px; }
+
 .category__list {
   display: flex;
   list-style-type: none; }
-  .category__list__item {
+  .category__list-item {
     padding-left: 10px; }
 
 .places-info {
@@ -145,15 +158,41 @@ button, .button:link, .button:visited {
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(6, 1fr); }
 
-.category__list__item {
+.category__list-item {
   cursor: pointer;
   justify-content: center;
   padding: 25px;
   display: flex;
+  font-size: 13px;
   flex-direction: column;
   align-items: center; }
-  .category__list__item:hover .fas {
+  .category__list-item:hover .fas {
     top: 5px; }
+
+.category__icon {
+  color: white; }
+
+.category__icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px; }
+  .category__icon-wrapper--restauracje {
+    background-color: #f0f005; }
+  .category__icon-wrapper--pizza {
+    background-color: #910022; }
+  .category__icon-wrapper--sushi {
+    background-color: #44c20a; }
+  .category__icon-wrapper--kebab {
+    background-color: #d17104; }
+  .category__icon-wrapper--koscioly {
+    background-color: #f54245; }
+  .category__icon-wrapper--hotele {
+    background-color: #731973; }
+  .category__icon-wrapper--pomnik {
+    background-color: #8f8f8f; }
 
 .leaflet-popup {
   margin-bottom: -20px !important; }
