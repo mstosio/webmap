@@ -15,7 +15,8 @@ export const baseElements = {
 
 export const Loader = item => {
     const loader = ` <div class="spinner-wrapper">
-    <img class="navbar__logo-img" src="assets/mapicons/globe-spinner.svg" alt="logo">
+    <div class="loading">
+    </div>
         </div>
     `;
     
